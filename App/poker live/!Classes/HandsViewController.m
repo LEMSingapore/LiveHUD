@@ -164,6 +164,7 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.backgroundColor = [UIColor clearColor];
     }
     
     for(UIView *view in cell.contentView.subviews)
@@ -204,7 +205,7 @@
                 
                 UITextField *handField = [[UITextField alloc] initWithFrame:CGRectMake(60, yOffset, 160, 20)];
                 handField.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:12];handField.textColor = [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1];
-                handField.textAlignment = UITextAlignmentLeft;handField.userInteractionEnabled = NO;
+                handField.textAlignment = NSTextAlignmentLeft;handField.userInteractionEnabled = NO;
                 handField.borderStyle = UITextBorderStyleNone;handField.backgroundColor = [UIColor clearColor];
                 [cell.contentView addSubview:handField];
                 
@@ -243,6 +244,10 @@
     [[AppDelegate sharedAppDelegate].navigationController pushViewController:vc animated:YES];
     [vc setCurStat:CurSession.sessionStats];
 
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

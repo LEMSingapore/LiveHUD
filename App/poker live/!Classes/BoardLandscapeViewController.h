@@ -18,14 +18,14 @@
 
 #import "NotesViewController.h"
 
-@interface BoardLandscapeViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, DoubleComponentInPickerViewViewControllerDelegate, PickerVCDelegate, AddLocationViewControllerDelegate>
+@interface BoardLandscapeViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, PickerVCDelegate, AddLocationViewControllerDelegate>
 {
     AppDelegate *appDelegate;
     Settings *settings;
     
     NSMutableArray *players;
     
-    DoubleComponentInPickerViewViewController *doublePicker;
+//    DoubleComponentInPickerViewViewController *doublePicker;
     PickerVC *pickerVC;
     CardsPickerVC *cardsPickerVC;
     AddLocationViewController *addPlayersVC;

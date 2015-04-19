@@ -168,6 +168,7 @@
     if ( cell == nil )
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.backgroundColor = [UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
@@ -204,9 +205,9 @@
                 backLabel.alpha = 1;
                 [cell.contentView addSubview:backLabel];
                 
-                UITextField *playerName = [[UITextField alloc] initWithFrame:CGRectMake(15, yOffset+3, 160, 30)];
+                UITextField *playerName = [[UITextField alloc] initWithFrame:CGRectMake(15, yOffset, 160, 30)];
                 playerName.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18];playerName.textColor = [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1];
-                playerName.textAlignment = UITextAlignmentLeft;
+                playerName.textAlignment = NSTextAlignmentLeft;
                 playerName.borderStyle = UITextBorderStyleNone;playerName.backgroundColor = [UIColor clearColor];
                 playerName.userInteractionEnabled = NO;
                 [cell.contentView addSubview:playerName];
@@ -289,5 +290,8 @@
     }
 }
 
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
 @end

@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#define kCardsComponent 0
-#define kSuitsComponent 1
 
 @interface DoubleComponentInPickerViewViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 {

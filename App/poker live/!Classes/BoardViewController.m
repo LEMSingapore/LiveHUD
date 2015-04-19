@@ -109,7 +109,7 @@
     
     self.betTextFiled.text = [settings getMinMaxLimitString];
     
-    for(int i=0; i < [settings.settingsNumberOfPlayers integerValue]; i++)
+    for(NSInteger i=0; i < [settings.settingsNumberOfPlayers integerValue]; i++)
     {
         NSString *playerName;
         switch (i)
@@ -177,13 +177,13 @@
         else
         {
             
-            playerName = [NSString stringWithFormat:@"Player%d", i];
+            playerName = [NSString stringWithFormat:@"Player%@", [NSNumber numberWithInteger:i]];
             curPlayer  = [appDelegate.dataManager getPlayerByName:playerName];
         }
         
         if (curPlayer != NULL)
         {
-            NSString *playerDictPos = [NSString stringWithFormat:@"%d", i];
+            NSString *playerDictPos = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:i]];
             [players setObject:curPlayer forKey:playerDictPos];
             
             curPlayer.playerCard1 = NULL;
@@ -263,6 +263,7 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.backgroundColor = [UIColor clearColor];
         
         UITextField *label1 = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 100, CELL_DEFAULT_HEIGHT+1)];
         label1.borderStyle = UITextBorderStyleLine;label1.userInteractionEnabled = NO;
@@ -892,9 +893,9 @@
     potSize = 0;
     self.potSizeField.text = @"0";
     
-    for(int i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
+    for(NSInteger i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
     {
-        NSString *playerDictPos = [NSString stringWithFormat:@"%d", i];
+        NSString *playerDictPos = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:i]];
         Player *curPlayer = [players objectForKey:playerDictPos];
         [curPlayer changeBetSize:0];
         [curPlayer changePlayerFoldedCardsValue:NO];
@@ -930,7 +931,7 @@
             currentBU++;
         }
         
-        for(int i=currentBU+1; i <= currentBU+2; i++)
+        for(NSInteger i=currentBU+1; i <= currentBU+2; i++)
         {
             NSInteger curPlayerPos = i;
             
@@ -975,7 +976,7 @@
 
 - (void)makeSBAndBBBets
 {
-    for(int i=currentBU+1; i <= currentBU+2; i++)
+    for(NSInteger i=currentBU+1; i <= currentBU+2; i++)
     {
         NSInteger curPlayerPos = i;
         
@@ -1003,9 +1004,9 @@
 
 - (void)clearPlayerBets
 {
-    for(int i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
+    for(NSInteger i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
     {
-        NSString *playerDictPos = [NSString stringWithFormat:@"%d", i];
+        NSString *playerDictPos = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:i]];
         Player *curPlayer = [players objectForKey:playerDictPos];
         [curPlayer changeBetSize:0];
     }
@@ -1063,7 +1064,8 @@
             
             if ([curPlayer.playerName isEqualToString:heroPlayer.playerName])
             {
-                NSLog(@"hero win %d, %f", potSize, (float)(curHeroMoney-startHeroMoney)/BB);
+                
+                NSLog(@"hero win %@, %f", [NSNumber numberWithInteger:potSize], (float)(curHeroMoney-startHeroMoney)/BB);
                 [curSession.sessionStats changeBiggestPotWon:potSize/BB];
                 [curSession.sessionStats changeStatsHandsWon:1];
                 
@@ -1072,10 +1074,8 @@
                 {
                     [curHand changeSessionBBwon:(float)curHeroBet/BB replace:YES];
                 }
-            }
-            else
-            {
-                NSLog(@"hero lost %d, %f", potSize, (float)(curHeroMoney-startHeroMoney)/BB);
+            } else {
+                NSLog(@"hero lost %@, %f", [NSNumber numberWithInteger:potSize], (float)(curHeroMoney-startHeroMoney)/BB);
                 if ([heroPlayer.playerBetSize integerValue] > 0 || heroInvestMoney)
                 {
                     [curSession.sessionStats changeBiggestPotLost:potSize/BB];
@@ -1090,9 +1090,10 @@
             //Change Session stats
             
             NSInteger selectedIndex = -10;
-            for(int i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
+            for(NSInteger i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
             {
-                NSString *playerDictPos = [NSString stringWithFormat:@"%d", i];
+                
+                NSString *playerDictPos = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:i]];
                 Player *curPlayer = [players objectForKey:playerDictPos];
                 [curPlayer changeBetSize:0];
                 [curPlayer changePlayerHands:1];
@@ -1108,12 +1109,12 @@
             {
                 BOOL allFolded = YES;
                 
-                for(int i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
+                for(NSInteger i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
                 {
                     if (i == selectedIndex)
                         continue;
                     
-                    NSString *playerDictPos = [NSString stringWithFormat:@"%d", i];
+                    NSString *playerDictPos = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:i]];
                     Player *curPlayer = [players objectForKey:playerDictPos];
                     
                     if (![curPlayer.playerFoldedCards boolValue])
@@ -1125,7 +1126,7 @@
                 
                 if (allFolded)
                 {
-                    NSString *playerDictPos = [NSString stringWithFormat:@"%d", selectedIndex];
+                    NSString *playerDictPos = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:selectedIndex]];
                     Player *curPlayer = [players objectForKey:playerDictPos];
                     [curPlayer changePlayerWalks:1];
                     NSLog(@"%@ walks+1", curPlayer.playerName);
@@ -1156,9 +1157,9 @@
             NSString *selectedPlayerStr = [pickerView getSelectedRowValueInComponent:0];
             
             NSInteger selectedIndex = -10;
-            for(int i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
+            for(NSInteger i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
             {
-                NSString *playerDictPos = [NSString stringWithFormat:@"%d", i];
+                NSString *playerDictPos = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:i]];
                 Player *curPlayer = [players objectForKey:playerDictPos];
                 
                 if ([curPlayer.playerName isEqualToString:selectedPlayerStr])
@@ -1172,13 +1173,13 @@
             UITableViewCell *cell = [self.myTableView cellForRowAtIndexPath:myIP];
             
             UITextField *betField = (UITextField *)[cell.contentView viewWithTag:selectedIndex*10+PLAYER_CARD_BET_SIZE];
-            NSString *currentMaxBetStr = [NSString stringWithFormat:@"%d", currentMaxBet];
+            NSString *currentMaxBetStr = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:currentMaxBet]];
             betField.text = currentMaxBetStr;
             
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
             [self.myTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
             
-            NSString *selectedIndexStr = [NSString stringWithFormat:@"%d", selectedIndex];
+            NSString *selectedIndexStr = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:selectedIndex]];
             [self performSelector:@selector(showKeyboardForTextField:) withObject:selectedIndexStr afterDelay:0.3];
             
             return;
@@ -1190,9 +1191,9 @@
             NSString *selectedPlayerStr = [pickerView getSelectedRowValueInComponent:0];
             
             NSInteger selectedIndex = -10;
-            for(int i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
+            for(NSInteger i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
             {
-                NSString *playerDictPos = [NSString stringWithFormat:@"%d", i];
+                NSString *playerDictPos = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:i]];
                 Player *curPlayer = [players objectForKey:playerDictPos];
                 
                 if ([curPlayer.playerName isEqualToString:selectedPlayerStr])
@@ -1206,13 +1207,13 @@
             UITableViewCell *cell = [self.myTableView cellForRowAtIndexPath:myIP];
             
             UITextField *betField = (UITextField *)[cell.contentView viewWithTag:selectedIndex*10+PLAYER_CARD_BET_SIZE];
-            NSString *currentMaxBetStr = [NSString stringWithFormat:@"%d", currentMaxBet*2 + 1];
+            NSString *currentMaxBetStr = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:currentMaxBet*2 + 1]];
             betField.text = currentMaxBetStr;
             
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
             [self.myTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
             
-            NSString *selectedIndexStr = [NSString stringWithFormat:@"%d", selectedIndex];
+            NSString *selectedIndexStr = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:selectedIndex]];
             [self performSelector:@selector(showKeyboardForTextField:) withObject:selectedIndexStr afterDelay:0.3];
             
             return;
@@ -1288,9 +1289,9 @@
 {
     NSInteger potSizeInt = 0;
     
-    for(int i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
+    for(NSInteger i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
     {
-        NSString *playerDictPos = [NSString stringWithFormat:@"%d", i];
+        NSString *playerDictPos = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:i]];
         Player *curPlayer = [players objectForKey:playerDictPos];
         potSizeInt += [curPlayer.playerBetSize integerValue];
     }
@@ -1299,16 +1300,16 @@
     potSize = potSize + potSizeInt;
     //NSLog(@"recalculatePotSize 2 %d, potSizeInt - %d", potSize, potSizeInt);
     
-    NSString *potSizeStr = [NSString stringWithFormat:@"%d", potSize];
+    NSString *potSizeStr = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:potSize]];
     self.potSizeField.text = potSizeStr;
 }
 
 - (void)showPickerWithTitleAndTag:(NSString*)title tag:(NSInteger)tag
 {
     NSMutableArray *allKeys = [NSMutableArray new];
-    for(int i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
+    for(NSInteger i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
     {
-        NSString *playerDictPos = [NSString stringWithFormat:@"%d", i];
+        NSString *playerDictPos = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:i]];
         Player *curPlayer = [players objectForKey:playerDictPos];
         
         if (![curPlayer.playerFoldedCards boolValue])
@@ -1340,9 +1341,9 @@
 {
     calcPlayerStats = YES;
     
-    for(int i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
+    for(NSInteger i=0; i< [settings.settingsNumberOfPlayers integerValue];i++)
     {
-        NSString *playerDictPos = [NSString stringWithFormat:@"%d", i];
+        NSString *playerDictPos = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger:i]];
         Player *curPlayer = [players objectForKey:playerDictPos];
         
         //change player VPIP

@@ -64,15 +64,16 @@
 }
 
 #pragma mark - Orientation
--(BOOL)shouldAutorotate
-{
-    return NO;
-}
+//@todo here
+//-(BOOL)shouldAutorotate
+//{
+//    return NO;
+//}
 
--(NSUInteger)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationPortrait;
-}
+//-(NSUInteger)supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationPortrait;
+//}
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
@@ -85,10 +86,10 @@
     
     if ([settings getSettingsIsChanged])
     {
-        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+//        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
         [[AppDelegate sharedAppDelegate] changeShowModalVCFlag:YES];
         BoardLandscapeViewController *vc = [[BoardLandscapeViewController alloc] init];
-        [[AppDelegate sharedAppDelegate].navigationController presentModalViewController:vc animated:YES];
+        [[AppDelegate sharedAppDelegate].navigationController presentViewController:vc animated:YES completion:nil];
     }
     else
     {
@@ -119,6 +120,10 @@
 {
     StoreViewController *vc = [[StoreViewController alloc] init];
     [[AppDelegate sharedAppDelegate].navigationController pushViewController:vc animated:YES];
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

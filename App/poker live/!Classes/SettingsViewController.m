@@ -81,7 +81,7 @@
     [super viewDidLoad];
     
     [self.view addSubview:pickerVC.view];
-
+    
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenHeight = screenRect.size.height;
 
@@ -100,7 +100,7 @@
     // Do any additional setup after loading the view from its nib.
     
     
-    for(int i=0; i < [settings.settingsNumberOfPlayers integerValue]; i++)
+    for(NSInteger i=0; i < [settings.settingsNumberOfPlayers integerValue]; i++)
     {
         NSString *playerName;
         switch (i)
@@ -186,7 +186,7 @@
     
     if (modalPresent)
     {
-        [[AppDelegate sharedAppDelegate].navigationController dismissModalViewControllerAnimated:YES];
+        [[AppDelegate sharedAppDelegate].navigationController dismissViewControllerAnimated:YES completion:nil];
     }
     else
     {
@@ -196,7 +196,7 @@
 
 - (IBAction)doneBtnClicked:(id)sender
 {
-    for(int i=0; i < [settings.settingsNumberOfPlayers integerValue]; i++)
+    for(NSInteger i=0; i < [settings.settingsNumberOfPlayers integerValue]; i++)
     {
         NSIndexPath *myIP = [NSIndexPath indexPathForRow:i inSection:0];
         UITableViewCell *cell = [self.myTableView cellForRowAtIndexPath:myIP];
@@ -302,7 +302,7 @@
     
     if (modalPresent)
     {
-        [[AppDelegate sharedAppDelegate].navigationController dismissModalViewControllerAnimated:NO];
+        [[AppDelegate sharedAppDelegate].navigationController dismissViewControllerAnimated:YES completion:nil];
     }
     else
     {
@@ -310,9 +310,9 @@
     }
     
     BoardLandscapeViewController *vc = [[BoardLandscapeViewController alloc] init];
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     [[AppDelegate sharedAppDelegate] changeShowModalVCFlag:YES];
-    [[AppDelegate sharedAppDelegate].navigationController presentModalViewController:vc animated:YES];
+    [[AppDelegate sharedAppDelegate].navigationController presentViewController:vc animated:YES completion:nil];
 }
 
 - (IBAction)numberOfPlayersBtnClicked:(id)sender
@@ -470,7 +470,7 @@
     if ( cell == nil )
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        
+        cell.backgroundColor = [UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
@@ -859,6 +859,10 @@
     [addLocVC setPickerType:LOCATIONS_PICKER showHeroName:NO];
     [addLocVC showWithTitle:@"" lockBackground:YES animated:NO];
     //[addLocVC showKeyboardCustom];
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

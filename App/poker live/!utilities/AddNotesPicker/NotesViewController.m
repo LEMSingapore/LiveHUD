@@ -61,7 +61,7 @@
 
     
     NSInteger yOffset = 25;
-    for(int i=0; i < 200;i++)
+    for(NSInteger i=0; i < 200;i++)
     {
         UIImageView *monthHeader = [[UIImageView alloc] initWithFrame:CGRectMake(0, yOffset, 705, 1)]; 
         monthHeader.backgroundColor = [UIColor  colorWithRed:221.0/255 green:221.0/255 blue:221.0/255 alpha:1.0];
@@ -138,11 +138,12 @@
     return [textField resignFirstResponder];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-	return YES;
-}
+//@todo here
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+//{
+//    // Return YES for supported orientations
+//	return YES;
+//}
 
 - (void)saveNotesClicked
 {
@@ -258,6 +259,10 @@
         
         self.view.hidden = YES;
     }
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

@@ -61,7 +61,10 @@
     
     NSString *handsPlayedTextString = [NSString stringWithFormat:@"NO OF HANDS PLAYED: %@", [curSessionStats.statsHandsPlayed stringValue]];
     NSString *handsWonTextString = [NSString stringWithFormat:@"NO OF HANDS WON: %@", [curSessionStats.statsHandsWon stringValue]];
-    NSString *handsLostTextString = [NSString stringWithFormat:@"NO OF HANDS LOST: %d", [curSessionStats.statsHandsPlayed integerValue]-[curSessionStats.statsHandsWon integerValue]];
+    
+    NSInteger handsLost = [curSessionStats.statsHandsPlayed integerValue]-[curSessionStats.statsHandsWon integerValue];
+    
+    NSString *handsLostTextString = [NSString stringWithFormat:@"NO OF HANDS LOST: %@", [NSNumber numberWithInteger: handsLost]];
     
     NSString *potWonTextString = [NSString stringWithFormat:@"BIGGEST POP WON: %@", [curSessionStats.statsBiggestPotWon stringValue]];
     NSString *potLostTextString = [NSString stringWithFormat:@"BIGGEST POT LOST: %@", [curSessionStats.statsBiggestPotLost stringValue]];
@@ -84,6 +87,10 @@
 {
     SettingsViewController *vc = [[SettingsViewController alloc] init];
     [[AppDelegate sharedAppDelegate].navigationController pushViewController:vc animated:YES];
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

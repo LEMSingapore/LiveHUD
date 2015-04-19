@@ -53,8 +53,8 @@
         settings = [appDelegate.dataManager getSettingsEntry];
         players = [NSMutableArray new];
         
-        doublePicker = [[DoubleComponentInPickerViewViewController alloc] initWithNibName:@"DoubleComponentInPickerViewViewController" bundle:nil];
-        doublePicker.delegate = self;
+//        doublePicker = [[DoubleComponentInPickerViewViewController alloc] initWithNibName:@"DoubleComponentInPickerViewViewController" bundle:nil];
+//        doublePicker.delegate = self;
 
         pickerVC = [[PickerVC alloc] initWithNibName:@"PickerVC" bundle:nil];
         pickerVC.delegate = self;
@@ -102,7 +102,7 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     //[[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(orientationChanged:)  name:UIDeviceOrientationDidChangeNotification  object:nil];
     
-    /*for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+    /*for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
     {
         //UILabel *statsLabel;
         //statsLabel = (UILabel*)[self.boardView viewWithTag:i+LABEL_OFFSET];
@@ -155,9 +155,9 @@
     [self.topView bringSubviewToFront:self.menuView];
     self.menuView.hidden = YES;
     
-    doublePicker.view.frame  = self.view.frame;
-    [self.view addSubview:doublePicker.view];
-    doublePicker.view.hidden = YES;
+//    doublePicker.view.frame  = self.view.frame;
+//    [self.view addSubview:doublePicker.view];
+//    doublePicker.view.hidden = YES;
     
     pickerVC.view.frame  = self.view.frame;
     [self.view addSubview:pickerVC.view];
@@ -229,15 +229,21 @@
 {
 	return self.boardView;
 }
+//@todo here
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+//{
+//    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+//}
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
-}
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+//{
+//    return YES; /* auto rotate always */
+//}
 
+/*
 - (void)orientationChanged:(NSNotification *)notification
 {
-/*    //NSLog(@"[UIDevice currentDevice].orientation = %d", [UIDevice currentDevice].orientation);
+    //NSLog(@"[UIDevice currentDevice].orientation = %d", [UIDevice currentDevice].orientation);
     CGFloat radians = atan2f(self.topView.transform.b, self.topView.transform.a);
     CGFloat degrees = radians * (180 / M_PI);
     NSLog(@"degrees = %f", degrees);
@@ -270,20 +276,20 @@
          {
              //[imageView removeFromSuperview];
          }];
-    }*/
+    }
 }
-
+*/
 #pragma mark - Initital player work
 - (void)createPlayersArray:(BOOL)checkSettings
 {
-    for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
     {
         NSString *playerName;
         UILabel *statsLabel;
 
         if (i < [settings getNumberOfPlayers])
         {
-            NSString *settingsPlayerName = [NSString stringWithFormat:@"settingsPlayer%d", i];
+            NSString *settingsPlayerName = [NSString stringWithFormat:@"settingsPlayer%@", [NSNumber numberWithInteger: i]];
             playerName = [settings valueForKey:settingsPlayerName];
         }
 
@@ -295,7 +301,7 @@
         else
         {
             playerName = EMPTY_PLAYER_NAME;
-            NSString *settingsPlayerName = [NSString stringWithFormat:@"settingsPlayer%d", i];
+            NSString *settingsPlayerName = [NSString stringWithFormat:@"settingsPlayer%@", [NSNumber numberWithInteger: i]];
             [settings setValue:playerName forKey:settingsPlayerName];
             curPlayer  = [appDelegate.dataManager getPlayerByName:playerName];
         }
@@ -336,7 +342,7 @@
         }
     }
     
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         
@@ -357,7 +363,7 @@
 
 - (void)refreshPlayersInfo
 {
-    for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
     {
         UILabel *statsLabel = (UILabel*)[self.boardView viewWithTag: i+LABEL_OFFSET];
         Player *curPlayer = [self getPlayerWithIndex:i];
@@ -487,7 +493,7 @@
     
     if (curPlayerTag >= 0)
     {
-        for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+        for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
         {
             Player *curPlayer  = [self getPlayerWithIndex:i];
             
@@ -524,7 +530,7 @@
         self.dealerBtn.frame = [[dealerBtnFrames objectAtIndex:currentBU] CGRectValue];
     }
     
-    for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
     {
         //player cards 1 and 2
         UIButton *card1 = (UIButton*)[self.boardView viewWithTag:i*10+FIRST_CARD_OFFSET];
@@ -597,7 +603,7 @@
 - (void)changeAllStatsFieldsAlpha:(float)alpha
 {
 
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
     {
         UILabel *statsLabel = (UILabel*)[self.boardView viewWithTag:i+LABEL_OFFSET];
         statsLabel.alpha = alpha;
@@ -615,22 +621,22 @@
 #pragma mark - Button Styles
 - (void)setButtonsStyles
 {
-    //for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
-    for(int i=0; i < 10; i++)
+    //for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i < 10; i++)
     {
         //board card 1-5
         UIButton *boardCard = (UIButton*)[self.boardView viewWithTag:i+BOARD_CARD_OFFSET];
-        boardCard.titleLabel.lineBreakMode = UILineBreakModeCharacterWrap;
-        boardCard.titleLabel.textAlignment = UITextAlignmentCenter;
+        boardCard.titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
+        boardCard.titleLabel.textAlignment = NSTextAlignmentCenter;
 
         //player cards 1 and 2
         UIButton *card1 = (UIButton*)[self.boardView viewWithTag:i*10+FIRST_CARD_OFFSET];
         UIButton *card2 = (UIButton*)[self.boardView viewWithTag:i*10+SECOND_CARD_OFFSET];
         
-        card1.titleLabel.lineBreakMode = UILineBreakModeCharacterWrap;
-        card1.titleLabel.textAlignment = UITextAlignmentCenter;
-        card2.titleLabel.lineBreakMode = UILineBreakModeCharacterWrap;
-        card2.titleLabel.textAlignment = UITextAlignmentCenter;
+        card1.titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
+        card1.titleLabel.textAlignment = NSTextAlignmentCenter;
+        card2.titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
+        card2.titleLabel.textAlignment = NSTextAlignmentCenter;
         
         UILabel *label = (UILabel*)[self.boardView viewWithTag:i+LABEL_OFFSET];
         //label.backgroundColor = [UIColor colorWithRed:55.0/255 green:55.0/255 blue:55.0/255 alpha:1.0];
@@ -647,8 +653,8 @@
 
 - (void)addStatsBackgroundImages
 {
-    //for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
-    for(int i=0; i < 10; i++)
+    //for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i < 10; i++)
     {
         UILabel *label = (UILabel*)[self.boardView viewWithTag:i+LABEL_OFFSET];
         CGRect frame = label.frame;
@@ -673,39 +679,52 @@
 }
 
 #pragma mark - Orientation
--(BOOL)shouldAutorotate
-{
-    return YES;
-}
+//-(BOOL)shouldAutorotate
+//{
+//    return YES;
+//}
 
--(NSUInteger)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskLandscape;
-}
-
+//-(NSUInteger)supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationMaskLandscape;
+//}
+//
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
-    return UIInterfaceOrientationLandscapeRight;
+    return UIInterfaceOrientationLandscapeLeft;
 }
 
 - (IBAction)backBtnClicked:(id)sender
 {
+    
+    [appDelegate endOfSessionConfirmation];
+    
     //[appDelegate.navigationController popViewControllerAnimated:YES];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NULL message:@"End Current Session?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
-    [alert show];
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NULL message:@"End Current Session?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+//    [alert show];
 }
+//
+//- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+//{
+//    NSString *title = [[alertView buttonTitleAtIndex:buttonIndex] lowercaseString];
+//    if ([title isEqualToString:@"ok"])
+//    {
+//        [appDelegate.navigationController popToRootViewControllerAnimated:NO];
+////>        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+//        [appDelegate changeShowModalVCFlag:NO];
+//        [appDelegate.navigationController dismissViewControllerAnimated:YES completion:nil];
+//    }
+//}
 
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    NSString *title = [[alertView buttonTitleAtIndex:buttonIndex] lowercaseString];
-    if ([title isEqualToString:@"ok"])
-    {
-        [appDelegate.navigationController popToRootViewControllerAnimated:NO];
-        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
-        [appDelegate changeShowModalVCFlag:NO];
-        [appDelegate.navigationController dismissModalViewControllerAnimated:YES];
-    }
-}
+//-(void) willPresentAlertView:(UIAlertView *)alertView {
+//    
+//    alertView.transform = CGAffineTransformMakeRotation(M_PI_2);
+//}
+//
+//- (void)didPresentAlertView:(UIAlertView *)alertView
+//{
+//    alertView.transform = CGAffineTransformMakeRotation(M_PI_2);
+//}
 
 #pragma mark - Board Card Clicked
 - (IBAction)boardCardClicked:(UIButton*)sender
@@ -895,13 +914,13 @@
                 
                 if (card1 != NULL && card2 != NULL)
                 {
-                    card1.titleLabel.lineBreakMode = UILineBreakModeCharacterWrap;
-                    card1.titleLabel.textAlignment = UITextAlignmentCenter;
+                    card1.titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
+                    card1.titleLabel.textAlignment = NSTextAlignmentCenter;
                     [card1 setTitle:[array objectAtIndex:0] forState:UIControlStateNormal];
                     [card1 setBackgroundImage:[UIImage imageNamed:@"CardFace.png"] forState:UIControlStateNormal];
                     
-                    card2.titleLabel.lineBreakMode = UILineBreakModeCharacterWrap;
-                    card2.titleLabel.textAlignment = UITextAlignmentCenter;
+                    card2.titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
+                    card2.titleLabel.textAlignment = NSTextAlignmentCenter;
                     [card2 setTitle:[array objectAtIndex:1] forState:UIControlStateNormal];
                     [card2 setBackgroundImage:[UIImage imageNamed:@"CardFace.png"] forState:UIControlStateNormal];
                     
@@ -1338,7 +1357,7 @@
 #pragma mark - card frame transform routine
 - (void)transformCardsToStartedPositions
 {
-    for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
     {
         UIButton *card1 = (UIButton*)[self.boardView viewWithTag:i*10+FIRST_CARD_OFFSET];
         UIButton *card2 = (UIButton*)[self.boardView viewWithTag:i*10+SECOND_CARD_OFFSET];
@@ -1352,7 +1371,7 @@
 {
     return;
     
-    for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
     {
         UIButton *card1 = (UIButton*)[self.boardView viewWithTag:i*10+FIRST_CARD_OFFSET];
         UIButton *card2 = (UIButton*)[self.boardView viewWithTag:i*10+SECOND_CARD_OFFSET];
@@ -1418,8 +1437,8 @@
             UIButton *card = (UIButton*)[self.boardView viewWithTag:pickerView.view.tag];
             //[card.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
             
-            card.titleLabel.lineBreakMode = UILineBreakModeCharacterWrap;
-            card.titleLabel.textAlignment = UITextAlignmentCenter;
+            card.titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
+            card.titleLabel.textAlignment = NSTextAlignmentCenter;
             
             [card setTitle:str forState:UIControlStateNormal];
             [card setBackgroundImage:[UIImage imageNamed:@"CardFace.png"] forState:UIControlStateNormal];
@@ -1468,7 +1487,7 @@
             
             addRemovePlayersMode = YES;
             
-            /*for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+            /*for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
             {
                 UILabel *statsLabel = (UILabel*)[self.boardView viewWithTag: i+LABEL_OFFSET];
                 statsLabel.userInteractionEnabled = YES;
@@ -1483,7 +1502,7 @@
             
             addRemovePlayersMode = YES;
             
-            /*for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+            /*for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
             {
                 UILabel *statsLabel = (UILabel*)[self.boardView viewWithTag: i+LABEL_OFFSET];
                 statsLabel.userInteractionEnabled = YES;
@@ -1499,7 +1518,7 @@
         
         addRemovePlayersMode = NO;
         
-        /*for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+        /*for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
         {
             UILabel *statsLabel = (UILabel*)[self.boardView viewWithTag: i+LABEL_OFFSET];
             statsLabel.userInteractionEnabled = NO;
@@ -1510,7 +1529,7 @@
 
 - (void)hideAllPlayersCards
 {
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         
@@ -1547,7 +1566,7 @@
         
         if ([settings.settingsNumberOfPlayers integerValue] <= 6)
         {
-            for(int i=0; i< (9-[settings.settingsNumberOfPlayers integerValue]); i++)
+            for(NSInteger i=0; i< (9-[settings.settingsNumberOfPlayers integerValue]); i++)
             {
                 Player *tmpPlayer = [appDelegate.dataManager getPlayerByName:EMPTY_PLAYER_NAME];
                 [players addObject:tmpPlayer];
@@ -1561,7 +1580,7 @@
         }
         else
         {
-            for(int i=0; i< (10-[settings.settingsNumberOfPlayers integerValue]); i++)
+            for(NSInteger i=0; i< (10-[settings.settingsNumberOfPlayers integerValue]); i++)
             {
                 Player *tmpPlayer = [appDelegate.dataManager getPlayerByName:EMPTY_PLAYER_NAME];
                 [players addObject:tmpPlayer];
@@ -1624,7 +1643,7 @@
 - (void)showPickerWithTitleAndTag:(NSString*)title tag:(NSInteger)tag
 {
     NSMutableArray *allKeys = [NSMutableArray new];
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         if (![curPlayer.playerFoldedCards boolValue] && ![curPlayer isPlayerIsOpenSeat])
@@ -1713,7 +1732,7 @@
                 {
                     NSInteger dividedBetPart = potSize/numOfPlayers;
                     
-                    for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+                    for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
                     {
                         Player *tmpPlayer = [self getPlayerWithIndex:i];
                         if (![tmpPlayer isPlayerIsOpenSeat] || ![tmpPlayer.playerFoldedCards boolValue])
@@ -1772,7 +1791,7 @@
             //Change Session stats
             
             
-            for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+            for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
             {
                 Player *curPlayer = [self getPlayerWithIndex:i];
                 [curPlayer clearBetSize];
@@ -1793,7 +1812,7 @@
             {
                 BOOL allFolded = YES;
                 
-                for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+                for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
                 {
                     if (i == selectedIndex)
                         continue;
@@ -1884,7 +1903,7 @@
 - (NSInteger)getPlayerPositionWithOffset:(NSInteger)offset
 {
     NSInteger curPlayerPos = currentBU;
-    for(int i=0; i < [settings getNumberOfPlayersForCurrentCount] - 1; i++)
+    for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount] - 1; i++)
     {
         curPlayerPos++;
         
@@ -1914,7 +1933,7 @@
     NSInteger curPlayerPos = currentPlayerPosistion;
     NSInteger offset = 1;
     
-    for(int i=0; i < [settings getNumberOfPlayersForCurrentCount] - 1; i++)
+    for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount] - 1; i++)
     {
         curPlayerPos--;
         
@@ -1932,7 +1951,7 @@
         if (offset == 0)
         {
             Player *prevPlayer = [self getPlayerWithIndex:curPlayerPos];
-            NSLog(@"for %d, prev = %@", currentPlayerPosistion, prevPlayer.playerName);
+            NSLog(@"for %@, prev = %@", [NSNumber numberWithInteger:currentPlayerPosistion], prevPlayer.playerName);
             return prevPlayer;
         }
     }
@@ -1945,7 +1964,7 @@
     NSInteger curPlayerPos = currentPlayerPosistion;
     NSInteger offset = 1;
     
-    for(int i=0; i < [settings getNumberOfPlayersForCurrentCount] - 1; i++)
+    for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount] - 1; i++)
     {
         curPlayerPos--;
         
@@ -1963,7 +1982,7 @@
         if (offset == 0)
         {
             Player *prevPlayer = [self getPlayerWithIndex:curPlayerPos];
-            NSLog(@"for %d, prev = %@", currentPlayerPosistion, prevPlayer.playerName);
+            NSLog(@"for %@, prev = %@", [NSNumber numberWithInteger: currentPlayerPosistion], prevPlayer.playerName);
             return [prevPlayer.playerBetSize floatValue];
         }
     }
@@ -2017,7 +2036,7 @@
 
 - (void)changePlayerBetsToZero
 {
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount]; i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         [curPlayer changeBetSize:0];
@@ -2028,7 +2047,7 @@
 
 - (void)clearPlayerBets
 {
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount]; i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         [curPlayer clearBetSize];
@@ -2039,7 +2058,7 @@
 
 - (void)clearPlayerTotalBets
 {
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount]; i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         [curPlayer clearTotalBetSize];
@@ -2050,7 +2069,7 @@
 
 - (void)clearPlayerFolds
 {
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount]; i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         [curPlayer changePlayerFoldedCardsValue:NO];
@@ -2122,7 +2141,7 @@
     }
     else
     {
-        NSLog(@"currentBU now = %d", currentBU);
+        NSLog(@"currentBU now = %@", [NSNumber numberWithInteger:currentBU]);
         for (int i= 0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
         {
             currentBU++;
@@ -2139,7 +2158,7 @@
             }
         }
         
-        NSLog(@"currentBU next = %d", currentBU);
+        NSLog(@"currentBU next = %@", [NSNumber numberWithInteger:currentBU]);
         
         [self newDealRoutine];
     }
@@ -2194,7 +2213,7 @@
     settings.settingsCard4 = NULL;
     settings.settingsCard5 = NULL;
     
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         
@@ -2280,7 +2299,7 @@
     NSInteger curPlayerPos = self.menuView.tag - MENU_TAG_OFFSET;
     NSInteger nextPlayerPos = self.menuView.tag - MENU_TAG_OFFSET + 1;
     
-    for(int i=0; i < [players count] - 1; i++)
+    for(NSInteger i=0; i < [players count] - 1; i++)
     {
         if (nextPlayerPos >= [players count])
         {
@@ -2362,7 +2381,7 @@
     }
     
     NSInteger curPlayerPos = currentBU;
-    for(int i=0; i < [settings getNumberOfPlayersForCurrentCount] - 1; i++)
+    for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount] - 1; i++)
     {
         curPlayerPos++;
         
@@ -2398,7 +2417,7 @@
     }
  
     NSInteger curPlayerPos = currentBU;
-    for(int i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i < [settings getNumberOfPlayersForCurrentCount]; i++)
     {
         curPlayerPos++;
 
@@ -2429,7 +2448,7 @@
 {
     calcPlayerStats = YES;
     
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         if (![curPlayer isPlayerIsOpenSeat])
@@ -2536,7 +2555,7 @@
     float potSizeInt = 0;
     potSize = 0;
     
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         potSizeInt += [curPlayer.playerTotalBetSize floatValue];
@@ -2553,7 +2572,7 @@
     float potSizeInt = 0;
 
     
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         potSizeInt += [curPlayer.playerTotalBetSize floatValue];
@@ -2686,7 +2705,7 @@
 {
     currentMaxBet = 0;
     
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         
@@ -2869,7 +2888,7 @@
     //NSInteger currentPlayersCount = [players count];
     NSInteger currentPlayersCount = 0;
     
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount]; i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount]; i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         /*if ([curPlayer isPlayerIsOpenSeat] || [curPlayer.playerFoldedCards boolValue])
@@ -2890,7 +2909,7 @@
 {
     NSInteger value = 0;
     
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         if ([curPlayer isPlayerIsOpenSeat])
@@ -2905,7 +2924,7 @@
 
 - (NSInteger)playerPositionForName:(NSString*)playerName
 {
-    for(int i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
+    for(NSInteger i=0; i< [settings getNumberOfPlayersForCurrentCount];i++)
     {
         Player *curPlayer = [self getPlayerWithIndex:i];
         if (![curPlayer isPlayerIsOpenSeat] && [curPlayer.playerName isEqualToString:playerName])

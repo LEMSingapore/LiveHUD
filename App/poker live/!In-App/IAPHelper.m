@@ -91,19 +91,19 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
                         if ([handsLimitStored integerValue] < [handsLimit integerValue] || [handsLimit integerValue] == PLATINUM_EDITION_HANDS)
                         {
                             [defaults setObject:handsLimit forKey:HANDS_LIMIT_NAME];
-                            NSLog(@"initWithProductIdentifiers overwrite handsLimitStored = %d, handsLimit = %d", [handsLimitStored unsignedIntegerValue], [handsLimit integerValue]);
+                            //NSLog(@"initWithProductIdentifiers overwrite handsLimitStored = %d, handsLimit = %d", [handsLimitStored unsignedIntegerValue], [handsLimit integerValue]);
                         }
                     }
                     else
                     {
                         [defaults setObject:handsLimit forKey:HANDS_LIMIT_NAME];
-                        NSLog(@"initWithProductIdentifiers create handsLimit = %d", [handsLimit unsignedIntegerValue]);
+                        //NSLog(@"initWithProductIdentifiers create handsLimit = %d", [handsLimit unsignedIntegerValue]);
                     }
                     
                     if ([handsLimit integerValue] == PLATINUM_EDITION_HANDS)
                     {
                         [defaults setBool:YES forKey:HANDS_UNLIMITED_NAME];
-                        NSLog(@"initWithProductIdentifiers unlimited hands");
+                        //NSLog(@"initWithProductIdentifiers unlimited hands");
                     }
                 }
             }
@@ -226,19 +226,19 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
                 if ([handsLimitStored integerValue] < [handsLimit integerValue] || [handsLimit integerValue] == PLATINUM_EDITION_HANDS)
                 {
                     [defaults setObject:handsLimit forKey:HANDS_LIMIT_NAME];
-                    NSLog(@"provideContentForProductIdentifier overwrite handsLimitStored = %d, handsLimit = %d", [handsLimitStored unsignedIntegerValue], [handsLimit integerValue]);
+                    //NSLog(@"provideContentForProductIdentifier overwrite handsLimitStored = %d, handsLimit = %d", [handsLimitStored unsignedIntegerValue], [handsLimit integerValue]);
                 }
             }
             else
             {
                 [defaults setObject:handsLimit forKey:HANDS_LIMIT_NAME];
-                NSLog(@"provideContentForProductIdentifier create handsLimit = %d", [handsLimit unsignedIntegerValue]);
+                //NSLog(@"provideContentForProductIdentifier create handsLimit = %d", [handsLimit unsignedIntegerValue]);
             }
             
             if ([handsLimit integerValue] == PLATINUM_EDITION_HANDS)
             {
                 [defaults setBool:YES forKey:HANDS_UNLIMITED_NAME];
-                NSLog(@"initWithProductIdentifiers unlimited hands");
+                //NSLog(@"initWithProductIdentifiers unlimited hands");
             }
         }
     }
@@ -333,9 +333,9 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
 - (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
 {
     NSLog(@"%@",queue );
-    NSLog(@"Restored Transactions are once again in Queue for purchasing %@",[queue transactions]);
+    //NSLog(@"Restored Transactions are once again in Queue for purchasing %@",[queue transactions]);
     
-    NSLog(@"received restored transactions: %i", queue.transactions.count);
+    //NSLog(@"received restored transactions: %i", queue.transactions.count);
     
     if (queue.transactions.count > 0)
     {
@@ -389,19 +389,19 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
                 if ([handsLimitStored integerValue] < [handsLimit integerValue])
                 {
                     [defaults setObject:handsLimit forKey:HANDS_LIMIT_NAME];
-                    NSLog(@"initWithProductIdentifiers overwrite handsLimitStored = %d, handsLimit = %d", [handsLimitStored unsignedIntegerValue], [handsLimit integerValue]);
+                    //NSLog(@"initWithProductIdentifiers overwrite handsLimitStored = %d, handsLimit = %d", [handsLimitStored unsignedIntegerValue], [handsLimit integerValue]);
                 }
             }
             else
             {
                 [defaults setObject:handsLimit forKey:HANDS_LIMIT_NAME];
-                NSLog(@"initWithProductIdentifiers create handsLimit = %d", [handsLimit unsignedIntegerValue]);
+                //NSLog(@"initWithProductIdentifiers create handsLimit = %d", [handsLimit unsignedIntegerValue]);
             }
             
             if ([handsLimit integerValue] == PLATINUM_EDITION_HANDS)
             {
                 [defaults setBool:YES forKey:HANDS_UNLIMITED_NAME];
-                NSLog(@"initWithProductIdentifiers unlimited hands");
+               // NSLog(@"initWithProductIdentifiers unlimited hands");
             }
         }
         

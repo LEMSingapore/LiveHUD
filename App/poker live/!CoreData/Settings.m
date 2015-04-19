@@ -192,7 +192,7 @@
         }
     }
     
-    for(int i=1; i < [self.settingsNumberOfPlayers integerValue]; i++)
+    for(NSInteger i=1; i < [self.settingsNumberOfPlayers integerValue]; i++)
     {
         NSString *playerName;
         switch (i)
@@ -296,7 +296,7 @@
         return YES;
     }
     
-    for(int i=1; i < [self.settingsNumberOfPlayers integerValue]; i++)
+    for(NSInteger i=1; i < [self.settingsNumberOfPlayers integerValue]; i++)
     {
         NSString *playerName;
         switch (i)
@@ -376,9 +376,9 @@
 {
     NSString *allCards = @"";
     
-    for(int i = 1; i < 6; i++)
+    for(NSInteger i = 1; i < 6; i++)
     {
-        NSString *valueName = [NSString stringWithFormat:@"settingsCard%d", i];
+        NSString *valueName = [NSString stringWithFormat:@"settingsCard%@", [NSNumber numberWithInteger: i]];
         
         NSString *card = [self valueForKey:valueName];
         if (card != NULL)
@@ -387,9 +387,9 @@
         }
     }
     
-    for(int i = 0; i < [self.settingsNumberOfPlayers integerValue]; i++)
+    for(NSInteger i = 0; i < [self.settingsNumberOfPlayers integerValue]; i++)
     {
-        NSString *valueName = [NSString stringWithFormat:@"settingsPlayer%d", i];
+        NSString *valueName = [NSString stringWithFormat:@"settingsPlayer%@", [NSNumber numberWithInteger: i]];
         //BOOL hasFoo = [[self.entity propertiesByName] objectForKey:valueName] != nil;
         //NSLog(@"hasFoo for %@ %d", valueName, hasFoo);
         
@@ -426,9 +426,9 @@
 {
     NSString *allCards = @"";
     
-    for(int i = 1; i < 6; i++)
+    for(NSInteger i = 1; i < 6; i++)
     {
-        NSString *valueName = [NSString stringWithFormat:@"settingsCard%d", i];
+        NSString *valueName = [NSString stringWithFormat:@"settingsCard%@", [NSNumber numberWithInteger:i]];
         
         NSString *card = [self valueForKey:valueName];
         if (card != NULL)
@@ -437,7 +437,7 @@
         }
     }
     
-    for(int i = 0; i < [players count]; i++)
+    for(NSInteger i = 0; i < [players count]; i++)
     {
         Player *curPlayer = [players objectAtIndex:i];
         

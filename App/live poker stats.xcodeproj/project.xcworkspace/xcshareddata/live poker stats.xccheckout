@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>140E2171-B958-4890-B92A-B8F79564D38D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>live poker stats</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6A12AC192DC79F4070B39541B64C2704408FF127</key>
+		<string>https://github.com/LEMSingapore/LiveHUD.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>App/live poker stats.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6A12AC192DC79F4070B39541B64C2704408FF127</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/LEMSingapore/LiveHUD.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6A12AC192DC79F4070B39541B64C2704408FF127</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6A12AC192DC79F4070B39541B64C2704408FF127</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Poker</string>
+		</dict>
+	</array>
+</dict>
+</plist>

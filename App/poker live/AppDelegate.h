@@ -42,5 +42,6 @@
 - (NSDictionary*)getCommercialPlist:(NSString*)keyName;
 - (BOOL)getIfCommercialPlistInDocuments:(NSString*)keyName;
 - (void)showCommercial;
+- (void)endOfSessionConfirmation;
 
 @end

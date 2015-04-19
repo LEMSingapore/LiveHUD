@@ -184,15 +184,46 @@
     showModalVC = value;
 }
 
-- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+//- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+//{
+//    if (showModalVC)
+//    {
+//        return UIInterfaceOrientationMaskLandscape;
+//    }
+//    
+//    return UIInterfaceOrientationMaskPortrait;
+//}
+
+- (void)endOfSessionConfirmation
 {
-    if (showModalVC)
-    {
-        return UIInterfaceOrientationMaskLandscape;
-    }
     
-    return UIInterfaceOrientationMaskPortrait;
+    //[appDelegate.navigationController popViewControllerAnimated:YES];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NULL message:@"End Current Session?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+    [alert show];
 }
+
+- (void)willPresentAlertView:(UIAlertView *)alertView
+{
+    [UIView beginAnimations:@"" context:nil];
+    [UIView setAnimationDuration:0.1];
+    alertView.transform = CGAffineTransformRotate(alertView.transform, M_PI_2);
+    //    alertView.transform = CGAffineTransformMakeRotation(M_PI_2);
+
+    [UIView commitAnimations];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [[alertView buttonTitleAtIndex:buttonIndex] lowercaseString];
+    if ([title isEqualToString:@"ok"])
+    {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+        //>        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+        [self changeShowModalVCFlag:NO];
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -661,7 +692,7 @@
         textField.backgroundColor = [UIColor clearColor];
         textField.textColor = [UIColor whiteColor];
         textField.text = [tmpD objectForKey:@"text"];
-        textField.textAlignment = UITextAlignmentCenter;
+        textField.textAlignment = NSTextAlignmentCenter;
         textField.numberOfLines = 0;
         textField.userInteractionEnabled = NO;
         

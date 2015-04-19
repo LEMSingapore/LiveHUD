@@ -159,6 +159,7 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.backgroundColor = [UIColor clearColor];
     }
     
     for(UIView *view in cell.contentView.subviews)
@@ -195,25 +196,25 @@
                 
                 UITextField *dateField = [[UITextField alloc] initWithFrame:CGRectMake(0, yOffset, 140, 20)];
                 dateField.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:11];dateField.textColor = [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1];
-                dateField.textAlignment = UITextAlignmentLeft;dateField.userInteractionEnabled = NO;
+                dateField.textAlignment = NSTextAlignmentLeft;dateField.userInteractionEnabled = NO;
                 dateField.borderStyle = UITextBorderStyleRoundedRect;dateField.backgroundColor = [UIColor clearColor];
                 [cell.contentView addSubview:dateField];
                 
                 UITextField *bbField = [[UITextField alloc] initWithFrame:CGRectMake(0, yOffset + 20, 140, 20)];
                 bbField.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:11];bbField.textColor = [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1];
-                bbField.textAlignment = UITextAlignmentLeft;bbField.userInteractionEnabled = NO;
+                bbField.textAlignment = NSTextAlignmentLeft;bbField.userInteractionEnabled = NO;
                 bbField.borderStyle = UITextBorderStyleRoundedRect;bbField.backgroundColor = [UIColor clearColor];
                 [cell.contentView addSubview:bbField];
                 
                 UITextField *handsField = [[UITextField alloc] initWithFrame:CGRectMake(140, yOffset, 140, 20)];
                 handsField.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:11];handsField.textColor = [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1];
-                handsField.textAlignment = UITextAlignmentLeft;handsField.userInteractionEnabled = NO;
+                handsField.textAlignment = NSTextAlignmentLeft;handsField.userInteractionEnabled = NO;
                 handsField.borderStyle = UITextBorderStyleRoundedRect;handsField.backgroundColor = [UIColor clearColor];
                 [cell.contentView addSubview:handsField];
                 
                 UITextField *locationField = [[UITextField alloc] initWithFrame:CGRectMake(140, yOffset + 20, 140, 20)];
                 locationField.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:11];locationField.textColor = [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1];
-                locationField.textAlignment = UITextAlignmentLeft;locationField.userInteractionEnabled = NO;
+                locationField.textAlignment = NSTextAlignmentLeft;locationField.userInteractionEnabled = NO;
                 locationField.borderStyle = UITextBorderStyleRoundedRect;locationField.backgroundColor = [UIColor clearColor];
                 [cell.contentView addSubview:locationField];
                 
@@ -361,6 +362,11 @@
 {
     StatsForSessionViewController *vc = [[StatsForSessionViewController alloc] init];
     [[AppDelegate sharedAppDelegate].navigationController pushViewController:vc animated:YES];
+}
+
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

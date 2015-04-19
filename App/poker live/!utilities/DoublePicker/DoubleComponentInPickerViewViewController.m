@@ -9,6 +9,10 @@
 #import "DoubleComponentInPickerViewViewController.h"
 
 @implementation DoubleComponentInPickerViewViewController
+
+static const NSInteger kCardsComponent = 0;
+static const NSInteger kSuitsComponent = 1;
+
 @synthesize marray2, marray1;
 
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -103,20 +107,22 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-	if (component == kSuitsComponent)
+	if (component == 1)
     {
 		return [self.marray2 count];
     }
-    
-    NSInteger suitRow = [self.mpicker selectedRowInComponent:kSuitsComponent];
-	NSString *suit = [self.marray2 objectAtIndex:suitRow];
-    
-    Settings *settings = [[AppDelegate sharedAppDelegate].dataManager getSettingsEntry];
-    Player *hero = [[AppDelegate sharedAppDelegate].dataManager getPlayerByName:settings.settingsHeroName];
-    
-    NSInteger rows = [self.marray1 count] - [settings numberOfExistedCardsForSuit:suit] - [hero numberOfExistedCardsForSuit:suit];
+
+//    NSInteger suitRow = [self.mpicker selectedRowInComponent:1];
+//	NSString *suit = [self.marray2 objectAtIndex:suitRow];
+//    
+//    Settings *settings = [[AppDelegate sharedAppDelegate].dataManager getSettingsEntry];
+//    Player *hero = [[AppDelegate sharedAppDelegate].dataManager getPlayerByName:settings.settingsHeroName];
+//    
+//    NSInteger rows = [self.marray1 count] - [settings numberOfExistedCardsForSuit:suit] - [hero numberOfExistedCardsForSuit:suit];
 	
-	return rows;
+//	return rows;
+    
+    return 1;
 }
 
 #pragma mark - Picker Delegate Methods
@@ -145,7 +151,8 @@
     [curCardsArray1 addObjectsFromArray:self.marray1];
     if ([settings numberOfExistedCardsForSuit:suit]>0 || [hero numberOfExistedCardsForSuit:suit]>0)
     {
-        for(int i = ([curCardsArray1 count]-1); i >= 0; i--)
+        
+        for(NSInteger i = ([curCardsArray1 count]-1); i >= 0; i--)
         {
             NSString *card = [curCardsArray1 objectAtIndex:i];
             
@@ -159,9 +166,7 @@
             }
             
         }
-        
     }
-
 	
 	return [curCardsArray1 objectAtIndex:row];
 }

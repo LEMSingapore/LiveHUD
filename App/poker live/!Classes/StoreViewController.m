@@ -34,8 +34,8 @@
 {
     [super viewDidLoad];
     
-    self.restoreBtn.titleLabel.lineBreakMode = UILineBreakModeCharacterWrap;
-    self.restoreBtn.titleLabel.textAlignment = UITextAlignmentCenter;
+    self.restoreBtn.titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
+    self.restoreBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.restoreBtn setTitle:@"RESTORE\nPURCHASES" forState:UIControlStateNormal];
     
     [DejalBezelActivityView activityViewForView:self.view withLabel:@"Refreshing In-App info..."].showNetworkActivityIndicator = YES;
@@ -108,7 +108,7 @@
     [alert show];
     return;*/
     
-    NSString *productName = [NSString stringWithFormat:@"product%d", sender.tag];
+    NSString *productName = [NSString stringWithFormat:@"product%@", [NSNumber numberWithInteger: sender.tag]];
     NSDictionary *tmpProduct = [productsFromBundle objectForKey:productName];
     SKProduct *product = [self productWithIdentifier:[tmpProduct objectForKey:@"appleId"]];
     
@@ -125,7 +125,7 @@
 
 - (void)buyBtnThread:(UIButton*)sender
 {
-    NSString *productName = [NSString stringWithFormat:@"product%d", sender.tag];
+    NSString *productName = [NSString stringWithFormat:@"product%@", [NSNumber numberWithInteger: sender.tag]];
     NSDictionary *tmpProduct = [productsFromBundle objectForKey:productName];
     NSString *productId = [tmpProduct objectForKey:@"appleId"];
     [[RageIAPHelper sharedInstance] provideContentForProductIdentifier:productId];
@@ -166,6 +166,7 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.backgroundColor = [UIColor clearColor];
     }
     
     for(UIView *view in cell.contentView.subviews)
@@ -182,7 +183,7 @@
     
     NSString *productTextString = @"N/A";
     
-    NSString *productName = [NSString stringWithFormat:@"product%d", indexPath.row+1];
+    NSString *productName = [NSString stringWithFormat:@"product%@", [NSNumber numberWithInteger: indexPath.row+1]];
     NSDictionary *tmpProduct = [productsFromBundle objectForKey:productName];
     SKProduct *product = [self productWithIdentifier:[tmpProduct objectForKey:@"appleId"]];
     
@@ -196,7 +197,7 @@
     else
     {
         NSDictionary *products = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Products" ofType:@"plist"]];
-        NSString *keyName = [NSString stringWithFormat:@"product%d", indexPath.row+1];
+        NSString *keyName = [NSString stringWithFormat:@"product%@", [NSNumber numberWithInteger: indexPath.row+1]];
         
         if ([products objectForKey:keyName]!= NULL)
         {
@@ -211,7 +212,7 @@
     UILabel *productText = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 215, CELL_DEFAULT_HEIGHT)];
     productText.text = productTextString;
     productText.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:20];productText.textColor = [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1];
-    productText.textAlignment = UITextAlignmentLeft;
+    productText.textAlignment = NSTextAlignmentLeft;
     productText.backgroundColor = [UIColor clearColor];
     productText.userInteractionEnabled = NO;
     [cell.contentView addSubview:productText];
@@ -244,7 +245,7 @@
     NSInteger index = sender.tag;
     
     NSDictionary *products = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Products" ofType:@"plist"]];
-    NSString *keyName = [NSString stringWithFormat:@"product%d", index];
+    NSString *keyName = [NSString stringWithFormat:@"product%@", [NSNumber numberWithInteger: index]];
     
     NSString *productTextString = @"N/A";
     if ([products objectForKey:keyName]!= NULL)
@@ -358,5 +359,8 @@
     [[RageIAPHelper sharedInstance] restoreTransactions];
 }
 
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
 @end

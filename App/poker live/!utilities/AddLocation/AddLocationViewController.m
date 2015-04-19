@@ -162,10 +162,10 @@
         rows = [self.allItems count];
     }
     
-    if (rows < 10)
-    {
-        rows = 10;
-    }
+//    if (rows < 10)
+//    {
+//        rows = 10;
+//    }
     
     return rows;
 }
@@ -194,6 +194,7 @@
         cell.textLabel.textColor = [UIColor blackColor];
         cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:22];
         //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.backgroundColor = [UIColor clearColor];
     }
     
     NSInteger count = 0;
@@ -720,5 +721,10 @@
          
      }];
 }
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 
 @end
