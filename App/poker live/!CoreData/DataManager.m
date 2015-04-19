@@ -539,14 +539,14 @@
 -(BOOL)checkForHandsLimit:(BOOL)showAlert
 {
     NSUInteger allHandsCount = [self getAllHandsCount];
-    NSLog(@"allHandsCount = %d", allHandsCount);
+    NSLog(@"allHandsCount = %@", [NSNumber numberWithInteger: allHandsCount]);
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSNumber *handsLimit = [NSNumber numberWithInteger:BRONZE_EDITION_HANDS];
     if ([defaults objectForKey:HANDS_LIMIT_NAME] != NULL)
     {
         handsLimit = [defaults objectForKey:HANDS_LIMIT_NAME];
-        NSLog(@"checkForHandsLimit handsLimit = %d", [handsLimit unsignedIntegerValue]);
+        NSLog(@"checkForHandsLimit handsLimit = %@", handsLimit);
         
         if ([handsLimit integerValue] == PLATINUM_EDITION_HANDS)
         {
@@ -625,8 +625,8 @@
 
 - (Hand*)addNewHandForSession:(Session*)entry
 {
-    NSInteger handsCount = [entry.hands.allObjects count];
-    NSString *handNamde = [NSString stringWithFormat:@"HAND %d", handsCount+1];
+    NSUInteger handsCount = [entry.hands.allObjects count];
+    NSString *handNamde = [NSString stringWithFormat:@"HAND %@", @(handsCount+1)];
     
     Hand *newHand = [self addHandEntryWithNameAndNumber:handNamde value:handsCount];
     

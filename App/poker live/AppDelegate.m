@@ -24,20 +24,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSLog(@"[NSUserDefaults standardUserDefaults] = %@", [NSUserDefaults standardUserDefaults]);
+    //NSLog(@"[NSUserDefaults standardUserDefaults] = %@", [NSUserDefaults standardUserDefaults]);
     
     //set up hands limits
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults objectForKey:HANDS_LIMIT_NAME] != NULL)
     {
         NSNumber *handsLimit = [defaults objectForKey:HANDS_LIMIT_NAME];
-        NSLog(@"didFinishLaunchingWithOptions handsLimit = %d", [handsLimit unsignedIntegerValue]);
+        NSLog(@"didFinishLaunchingWithOptions handsLimit = %@", handsLimit );
     }
     else
     {
         NSNumber *handsLimit = [NSNumber numberWithInteger:BRONZE_EDITION_HANDS];
         [defaults setObject:handsLimit forKey:HANDS_LIMIT_NAME];
-        NSLog(@"didFinishLaunchingWithOptions create handsLimit = %d", [handsLimit unsignedIntegerValue]);
+        NSLog(@"didFinishLaunchingWithOptions create handsLimit = %@", handsLimit);
         [defaults synchronize];
     }
     
@@ -47,7 +47,7 @@
     [RageIAPHelper sharedInstance];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    NSLog(@"self.window = %@", self.window);
+    //NSLog(@"self.window = %@", self.window);
     // Override point for customization after application launch.
     
     self.viewController = [[HomePageViewController alloc] initWithNibName:@"HomePageViewController" bundle:nil];
@@ -118,6 +118,7 @@
 {
     //Create Airship options dictionary and add the required UIApplication launchOptions
     NSMutableDictionary *takeOffOptions = [NSMutableDictionary dictionary];
+#pragma unused(takeOffOptions)
 //    [takeOffOptions setValue:launchOptions forKey:UAirshipTakeOffOptionsLaunchOptionsKey];
     
     // Call takeOff (which creates the UAirship singleton), passing in the launch options so the
@@ -216,7 +217,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    NSLog(@"applicationDidBecomeActive %@", application);
+//    NSLog(@"applicationDidBecomeActive %@", application);
     [DejalBezelActivityView removeViewAnimated:YES];
     
     //show commercial;

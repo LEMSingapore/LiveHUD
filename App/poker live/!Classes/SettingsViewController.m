@@ -394,7 +394,7 @@
                 }
                 
                 
-                stackField.text = [NSString stringWithFormat:@"%d", stackSize];
+                stackField.text = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger: stackSize]];
             }
             
             [self.myTableView reloadData];
@@ -441,7 +441,7 @@
                     [playersStacks addObject:curPlayer.playerStackSize];
                 }
                 
-                stackField.text = [NSString stringWithFormat:@"%d", stackSize];
+                stackField.text = [NSString stringWithFormat:@"%@", [NSNumber numberWithInteger: stackSize]];
             }
             
             [self.myTableView reloadData];
@@ -531,12 +531,12 @@
             }
             else
             {
-                stackField.text = [NSString stringWithFormat:@"%d", [settings.settingsMaxLimit integerValue] * 100];
+                stackField.text = [NSString stringWithFormat:@"%@", @([settings.settingsMaxLimit integerValue] * 100)];
             }
         }
         else
         {
-            stackField.text = [NSString stringWithFormat:@"%d", [settings.settingsMaxLimit integerValue] * 100];
+            stackField.text = [NSString stringWithFormat:@"%@", @([settings.settingsMaxLimit integerValue] * 100)];
         }
         
         /*if (indexPath.row < [playersNames count])
@@ -789,7 +789,7 @@
     {
         NSInteger textFieldTag = textField.tag/10;
         NSLog(@"before playersStacks %@", playersStacks);
-        NSNumber *newStack = [NSNumber numberWithInt:[textField.text integerValue]];
+        NSNumber *newStack = @([textField.text integerValue]);
         [playersStacks replaceObjectAtIndex:textFieldTag withObject:newStack];
         NSLog(@"after playersStacks %@", playersStacks);
     }

@@ -89,19 +89,19 @@
 
 - (NSString*)getNumberOfPlayersString
 {
-    NSString *str = [NSString stringWithFormat:@"%d", [self.settingsNumberOfPlayers integerValue]];
+    NSString *str = [NSString stringWithFormat:@"%@", self.settingsNumberOfPlayers];
     return str;
 }
 
 - (NSString*)getMinLimitString
 {
-    NSString *str = [NSString stringWithFormat:@"%d", [self.settingsMinLimit integerValue]];
+    NSString *str = [NSString stringWithFormat:@"%@", self.settingsMinLimit];
     return str;
 }
 
 - (NSString*)getMaxLimitString
 {
-    NSString *str = [NSString stringWithFormat:@"%d", [self.settingsMaxLimit integerValue]];
+    NSString *str = [NSString stringWithFormat:@"%@", self.settingsMaxLimit];
     return str;
 }
 

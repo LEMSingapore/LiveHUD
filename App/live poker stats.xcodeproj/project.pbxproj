@@ -829,6 +829,15 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Onix Systems";
+				TargetAttributes = {
+					6B41B13816CBE8EE009A005D = {
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 6B41B13416CBE8EE009A005D /* Build configuration list for PBXProject "live poker stats" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1079,6 +1088,7 @@
 				GCC_PREFIX_HEADER = "Poker Live/LivePokerStats-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"Poker Live/!Utilities/Airship/\"/**";
 				INFOPLIST_FILE = "Poker Live/Live Poker Stats-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Poker Live/!Utilities/Airship\"",
@@ -1091,10 +1101,12 @@
 		6B41B15D16CBE8EE009A005D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Poker Live/LivePokerStats-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"Poker Live/!Utilities/Airship/\"/**";
 				INFOPLIST_FILE = "Poker Live/Live Poker Stats-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Poker Live/!Utilities/Airship\"",

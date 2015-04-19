@@ -397,7 +397,8 @@
         }
         
         
-        NSString *idStr = [NSString stringWithFormat:@"%d", indexPath.row];
+        NSString *idStr = [@(indexPath.row) stringValue];
+        
         Player *curPlayer = [players objectForKey:idStr];
         if (curPlayer != NULL)
         {
@@ -528,7 +529,7 @@
         case PLAYER_CARD_BET_SIZE:
         {
             
-            NSString *str = [NSString stringWithFormat:@"%d", currentMaxBet];
+            NSString *str = [@(currentMaxBet) stringValue];
             textField.text = str;
         }
             break;
@@ -596,7 +597,7 @@
                 
             Player *curPlayer = [appDelegate.dataManager getPlayerByName:textField.text];
             
-            NSString *idStr = [NSString stringWithFormat:@"%d", textField.tag/10];
+            NSString *idStr = [@(textField.tag/10) stringValue];
             [players setObject:curPlayer forKey:idStr];
             
             NSIndexPath *myIP = [NSIndexPath indexPathForRow:textField.tag/10 inSection:0];
@@ -617,7 +618,7 @@
             
         case PLAYER_STACK:
         {
-            NSString *idStr = [NSString stringWithFormat:@"%d", textField.tag/10];
+            NSString *idStr = [@(textField.tag/10) stringValue];
             Player *curPlayer = [players objectForKey:idStr];
 
             if (curPlayer!=NULL)
@@ -630,7 +631,7 @@
             
         case PLAYER_CARD_BET_SIZE:
         {
-            NSString *idStr = [NSString stringWithFormat:@"%d", textField.tag/10];
+            NSString *idStr = [@(textField.tag/10) stringValue];
             Player *curPlayer = [players objectForKey:idStr];
             
             NSInteger playerBet = [textField.text integerValue];
@@ -938,7 +939,7 @@
                 curPlayerPos = i - [settings.settingsNumberOfPlayers integerValue];
             }
             
-            NSString *playerDictPos = [NSString stringWithFormat:@"%d", curPlayerPos];
+            NSString *playerDictPos = [@(curPlayerPos) stringValue];
             Player *curPlayer = [players objectForKey:playerDictPos];
             
             if (i == currentBU + 1)
@@ -983,7 +984,7 @@
             curPlayerPos = i - [settings.settingsNumberOfPlayers integerValue];
         }
         
-        NSString *playerDictPos = [NSString stringWithFormat:@"%d", curPlayerPos];
+        NSString *playerDictPos = [@(curPlayerPos) stringValue];
         Player *curPlayer = [players objectForKey:playerDictPos];
         
         if (i == currentBU + 1)
