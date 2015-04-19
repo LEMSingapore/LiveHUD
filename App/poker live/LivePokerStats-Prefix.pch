@@ -1,0 +1,61 @@
+//
+// Prefix header for all source files of the 'Poker Live' target in the 'Poker Live' project
+//
+
+#import <Availability.h>
+
+//#define COMMERCIAL_PLIST_URL @"http://dl.dropboxusercontent.com/u/41340162/API/commercial.plist"
+#define COMMERCIAL_PLIST_URL @"http://pokerlivehud.com/API/commercial.plist"
+
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
+#define EMPTY_PLAYER_NAME @"Seat Open"
+
+#define HANDS_LIMIT_NAME @"handsLimitValue"
+#define HANDS_UNLIMITED_NAME @"subscriptionValue"
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#define BRONZE_EDITION_HANDS   30
+#define PLATINUM_EDITION_HANDS 0
+
+#define SPLIT_MSG_STRING @"Split (divide the pot among remaining players)"
+
+#define VPIP @"vpip"
+#define PFR @"pfr"
+#define AGG @"agg"
+#define WALK @"walks"
+#define FOLD @"fold"
+#define BET @"bet"
+#define RAISE @"raise"
+#define CALL @"call"
+#define CHECK @"check"
+#define BET_3 @"3bet"
+#define BET_3_OPP @"3Oppbet"
+#define C_BET @"cbet"
+#define C_BET_OPP @"cOppbet"
+#define DONK_BET @"donkbet"
+#define DONK_BET_OPP @"donkOppbet"
+
+#define NEUTRAL_STATUS 0
+#define FOLD_STATUS 1
+#define CHECK_STATUS 2
+#define CALL_STATUS 3
+#define BET_STATUS 4
+#define RAISE_STATUS 5
+
+#define LOCATIONS_PICKER 1
+#define PLAYERS_PICKER 2
+
+#import "DejalActivityView.h"
+#import "AppDelegate.h"
+#import  "Settings.h"
+#import  "Player.h"
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#endif

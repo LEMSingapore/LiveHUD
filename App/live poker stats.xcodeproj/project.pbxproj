@@ -1,0 +1,1145 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B0506F816CCEA7200719CCB /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0506F716CCEA7200719CCB /* DataManager.m */; };
+		6B0506FC16CCEB8600719CCB /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0506FB16CCEB8600719CCB /* Settings.m */; };
+		6B05070016CCEEF900719CCB /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0506FE16CCEEF900719CCB /* BoardViewController.m */; };
+		6B05070116CCEEF900719CCB /* BoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0506FF16CCEEF900719CCB /* BoardViewController.xib */; };
+		6B05070416CD2D3000719CCB /* CardShirt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B05070316CD2D3000719CCB /* CardShirt.jpg */; };
+		6B05070816CD3EFE00719CCB /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05070716CD3EFE00719CCB /* Player.m */; };
+		6B166CD21728277E00F5FD50 /* topMenuBoardBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B166CD11728277E00F5FD50 /* topMenuBoardBkg.png */; };
+		6B166CD4172827E900F5FD50 /* topMenuBoardBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B166CD3172827E900F5FD50 /* topMenuBoardBtnBkg.png */; };
+		6B166CD6172828AE00F5FD50 /* topMenuBoardBetBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B166CD5172828AE00F5FD50 /* topMenuBoardBetBkg.png */; };
+		6B166CD817282ECD00F5FD50 /* boardBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B166CD717282ECD00F5FD50 /* boardBkg.png */; };
+		6B166CDA172830C200F5FD50 /* bottomMenuBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B166CD9172830C200F5FD50 /* bottomMenuBtnBkg.png */; };
+		6B166CDC1728322800F5FD50 /* bottomMenuBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B166CDB1728322800F5FD50 /* bottomMenuBkg.png */; };
+		6B166CDE1728333200F5FD50 /* bottomMenuTextBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B166CDD1728333200F5FD50 /* bottomMenuTextBkg.png */; };
+		6B166CE0172835D000F5FD50 /* bottomMenuSmallBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B166CDF172835D000F5FD50 /* bottomMenuSmallBtnBkg.png */; };
+		6B166CE217283E0F00F5FD50 /* boardBkg3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B166CE117283E0F00F5FD50 /* boardBkg3.png */; };
+		6B1D75181725722F00A48D22 /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B1D75171725722F00A48D22 /* Products.plist */; };
+		6B1D751A1725771500A48D22 /* viewBtnOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1D75191725771500A48D22 /* viewBtnOff.png */; };
+		6B1D751D1725779100A48D22 /* viewBtnOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1D751C1725779100A48D22 /* viewBtnOn.png */; };
+		6B1D751F1725783900A48D22 /* separator.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1D751E1725783900A48D22 /* separator.png */; };
+		6B1D75231725807A00A48D22 /* labelBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1D75211725807A00A48D22 /* labelBkg.png */; };
+		6B1D75241725807A00A48D22 /* storeModalBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1D75221725807A00A48D22 /* storeModalBkg.png */; };
+		6B1D75261725840600A48D22 /* storeTitleBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1D75251725840600A48D22 /* storeTitleBkg.png */; };
+		6B1D752817258A0800A48D22 /* appStoreBuyNow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1D752717258A0800A48D22 /* appStoreBuyNow.png */; };
+		6B207CCE17035405002D8986 /* CardsPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B207CCC17035405002D8986 /* CardsPickerVC.m */; };
+		6B207CCF17035405002D8986 /* CardsPickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B207CCD17035405002D8986 /* CardsPickerVC.xib */; };
+		6B207CD217035802002D8986 /* cardPickerBtnBkg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B207CD117035802002D8986 /* cardPickerBtnBkg.jpg */; };
+		6B207CD417035904002D8986 /* cardPickerBackspaceBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B207CD317035904002D8986 /* cardPickerBackspaceBkg.png */; };
+		6B207CD617035A5C002D8986 /* cardPickerTitleBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B207CD517035A5C002D8986 /* cardPickerTitleBkg.png */; };
+		6B207CD817035B45002D8986 /* cardPickerCardsLabelBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B207CD717035B45002D8986 /* cardPickerCardsLabelBkg.png */; };
+		6B207CDA17035F24002D8986 /* cardPickerGreyBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B207CD917035F24002D8986 /* cardPickerGreyBtnBkg.png */; };
+		6B207CDC17036344002D8986 /* cardPickerWhiteBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B207CDB17036344002D8986 /* cardPickerWhiteBtnBkg.png */; };
+		6B3A6B5A16CBEFDE00020F04 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3A6B5816CBEFDE00020F04 /* SettingsViewController.m */; };
+		6B3A6B5B16CBEFDE00020F04 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A6B5916CBEFDE00020F04 /* SettingsViewController.xib */; };
+		6B3A6B6416CBF7A500020F04 /* menuButtonBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A6B5F16CBF7A500020F04 /* menuButtonBg.png */; };
+		6B3A6B6516CBF7A500020F04 /* menuButtonBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A6B6016CBF7A500020F04 /* menuButtonBg@2x.png */; };
+		6B3A6B6616CBF7A500020F04 /* ModalBg-Bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A6B6116CBF7A500020F04 /* ModalBg-Bottom.png */; };
+		6B3A6B6716CBF7A500020F04 /* pickerViewBg-Top.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A6B6216CBF7A500020F04 /* pickerViewBg-Top.png */; };
+		6B3A6B6816CBF7A500020F04 /* pickerViewBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A6B6316CBF7A500020F04 /* pickerViewBg.png */; };
+		6B3A6B6B16CBF81400020F04 /* topMenuBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A6B6916CBF81400020F04 /* topMenuBkg.png */; };
+		6B3A6B6C16CBF81400020F04 /* topMenuBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A6B6A16CBF81400020F04 /* topMenuBtnBkg.png */; };
+		6B41B13D16CBE8EE009A005D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41B13C16CBE8EE009A005D /* UIKit.framework */; };
+		6B41B13F16CBE8EE009A005D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41B13E16CBE8EE009A005D /* Foundation.framework */; };
+		6B41B14116CBE8EE009A005D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41B14016CBE8EE009A005D /* CoreGraphics.framework */; };
+		6B41B14316CBE8EE009A005D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41B14216CBE8EE009A005D /* CoreData.framework */; };
+		6B41B14916CBE8EE009A005D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B41B14716CBE8EE009A005D /* InfoPlist.strings */; };
+		6B41B14B16CBE8EE009A005D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41B14A16CBE8EE009A005D /* main.m */; };
+		6B41B14F16CBE8EE009A005D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41B14E16CBE8EE009A005D /* AppDelegate.m */; };
+		6B41B15816CBE8EE009A005D /* Poker_Live.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B41B15616CBE8EE009A005D /* Poker_Live.xcdatamodeld */; };
+		6B41B16416CBEA6A009A005D /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41B16216CBEA6A009A005D /* HomePageViewController.m */; };
+		6B41B16516CBEA6A009A005D /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B41B16316CBEA6A009A005D /* HomePageViewController.xib */; };
+		6B41B17116CBEABB009A005D /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41B16916CBEABB009A005D /* DejalActivityView.m */; };
+		6B41B17216CBEABB009A005D /* PickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41B16C16CBEABB009A005D /* PickerVC.m */; };
+		6B41B17316CBEABB009A005D /* PickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B41B16D16CBEABB009A005D /* PickerVC.xib */; };
+		6B5CAEC316DD0A92007D0D02 /* settingsDoneBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5CAEC216DD0A92007D0D02 /* settingsDoneBtnBkg.png */; };
+		6BB4EC4D171D7A6B002C703E /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BB4EC4C171D7A6B002C703E /* AirshipConfig.plist */; };
+		6BB4EDC6171D7BF1002C703E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4EDC5171D7BF1002C703E /* CFNetwork.framework */; };
+		6BB4EDC8171D7C14002C703E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4EDC7171D7C14002C703E /* MobileCoreServices.framework */; };
+		6BB4EDCA171D7C1E002C703E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4EDC9171D7C1E002C703E /* Security.framework */; };
+		6BB4EDCC171D7C28002C703E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4EDCB171D7C28002C703E /* SystemConfiguration.framework */; };
+		6BB4EDCE171D7C6B002C703E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4EDCD171D7C6B002C703E /* libz.dylib */; };
+		6BB4EDD0171D7C74002C703E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4EDCF171D7C74002C703E /* libsqlite3.dylib */; };
+		6BB4EDD2171D7C7C002C703E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4EDD1171D7C7C002C703E /* CoreTelephony.framework */; };
+		6BB4EDD4171D7C82002C703E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4EDD3171D7C82002C703E /* StoreKit.framework */; };
+		6BB4EDD6171D7C88002C703E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4EDD5171D7C88002C703E /* CoreLocation.framework */; };
+		6BB4EDD8171D7C8D002C703E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4EDD7171D7C8D002C703E /* MessageUI.framework */; };
+		6BB4EDDA171D7C93002C703E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4EDD9171D7C93002C703E /* AudioToolbox.framework */; };
+		6BB4EDDC171D7CA4002C703E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4EDDB171D7CA3002C703E /* MapKit.framework */; };
+		6BB4EE08171D9777002C703E /* commercialDoneBtnOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB4EE00171D9776002C703E /* commercialDoneBtnOff.png */; };
+		6BB4EE09171D9777002C703E /* commercialDoneBtnOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB4EE01171D9776002C703E /* commercialDoneBtnOn.png */; };
+		6BB8D8EC171EE34E003E4A70 /* commercial1 in Resources */ = {isa = PBXBuildFile; fileRef = 6BB8D8E9171EE34E003E4A70 /* commercial1 */; };
+		6BB8D8ED171EE34E003E4A70 /* commercial2 in Resources */ = {isa = PBXBuildFile; fileRef = 6BB8D8EA171EE34E003E4A70 /* commercial2 */; };
+		6BB8D8EE171EE34E003E4A70 /* commercial3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BB8D8EB171EE34E003E4A70 /* commercial3 */; };
+		6BB8D8F2171EF0F2003E4A70 /* commercial.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BB8D8F1171EF0F1003E4A70 /* commercial.plist */; };
+		6BBD61E316EE29C30031222C /* heroBtnBkgSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBD61E216EE29C30031222C /* heroBtnBkgSelected.png */; };
+		6BC0D7C9170EC9590074CE4E /* NotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0D7C7170EC9590074CE4E /* NotesViewController.m */; };
+		6BC0D7CA170EC9590074CE4E /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC0D7C8170EC9590074CE4E /* NotesViewController.xib */; };
+		6BC0D7CC170EE9CB0074CE4E /* ShadowUpToDown1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC0D7CB170EE9CB0074CE4E /* ShadowUpToDown1.png */; };
+		6BC532CF1721896500242A9A /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC532CE1721896500242A9A /* IAPHelper.m */; };
+		6BC532D317218D4000242A9A /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC532D117218D4000242A9A /* StoreViewController.m */; };
+		6BC532D417218D4000242A9A /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC532D217218D4000242A9A /* StoreViewController.xib */; };
+		6BC532D717218E1C00242A9A /* storeVCBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC532D617218E1C00242A9A /* storeVCBackground.png */; };
+		6BC532DA1721965400242A9A /* RageIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC532D91721965400242A9A /* RageIAPHelper.m */; };
+		6BC9350C16DBCA4D00D48EBF /* mainMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9350B16DBCA4D00D48EBF /* mainMenuBackground.png */; };
+		6BC9351216DBD2A300D48EBF /* mainMenuConfigBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9350D16DBD2A300D48EBF /* mainMenuConfigBtn.png */; };
+		6BC9351316DBD2A300D48EBF /* mainMenuHelpBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9350E16DBD2A300D48EBF /* mainMenuHelpBtn.png */; };
+		6BC9351416DBD2A300D48EBF /* mainMenuNotesBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9350F16DBD2A300D48EBF /* mainMenuNotesBtn.png */; };
+		6BC9351516DBD2A300D48EBF /* mainMenuPreviewPreviousBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9351016DBD2A300D48EBF /* mainMenuPreviewPreviousBtn.png */; };
+		6BC9351616DBD2A300D48EBF /* mainMenuStartBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9351116DBD2A300D48EBF /* mainMenuStartBtn.png */; };
+		6BC9351B16DCF2B600D48EBF /* mainMenuSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9351A16DCF2B600D48EBF /* mainMenuSettings.png */; };
+		6BC9351E16DCF53600D48EBF /* leftArrowBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9351C16DCF53600D48EBF /* leftArrowBkg.png */; };
+		6BC9351F16DCF53600D48EBF /* rightArrowBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9351D16DCF53600D48EBF /* rightArrowBkg.png */; };
+		6BC9352316DCF6F600D48EBF /* settingsBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9352116DCF6F600D48EBF /* settingsBkg.png */; };
+		6BC9352416DCF6F600D48EBF /* settingsHeadTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9352216DCF6F600D48EBF /* settingsHeadTitle.png */; };
+		6BC9352716DCF74000D48EBF /* backBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9352516DCF74000D48EBF /* backBtnBkg.png */; };
+		6BC9352816DCF74000D48EBF /* greenBallBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9352616DCF74000D48EBF /* greenBallBkg.png */; };
+		6BCDFEC617293136004934BB /* statOpenSeatBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCDFEC317293136004934BB /* statOpenSeatBkg.png */; };
+		6BCDFEC717293136004934BB /* statPlayerBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCDFEC417293136004934BB /* statPlayerBkg.png */; };
+		6BCDFEC817293136004934BB /* statPlayerSelectedBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCDFEC517293136004934BB /* statPlayerSelectedBkg.png */; };
+		6BD2BA0B1746761A00546FF7 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 6BD2BA0A1746761A00546FF7 /* iTunesArtwork */; };
+		6BD4138516E101380057A5C0 /* StatsForSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4138316E101370057A5C0 /* StatsForSessionViewController.m */; };
+		6BD4138616E101380057A5C0 /* StatsForSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD4138416E101370057A5C0 /* StatsForSessionViewController.xib */; };
+		6BD4138916E101DB0057A5C0 /* statsForSessionBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD4138816E101DB0057A5C0 /* statsForSessionBkg.png */; };
+		6BD4138B16E102BD0057A5C0 /* statsBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD4138A16E102BD0057A5C0 /* statsBtnBkg.png */; };
+		6BD4139116E10F2C0057A5C0 /* HandsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4138F16E10F2C0057A5C0 /* HandsViewController.m */; };
+		6BD4139216E10F2C0057A5C0 /* HandsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD4139016E10F2C0057A5C0 /* HandsViewController.xib */; };
+		6BD4139516E10F440057A5C0 /* sessionVCbkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD4139416E10F440057A5C0 /* sessionVCbkg.png */; };
+		6BD45D2F16CE71FE008607C2 /* icon57.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD45D2E16CE71FE008607C2 /* icon57.1.png */; };
+		6BD45D3116CE7202008607C2 /* icon114.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD45D3016CE7202008607C2 /* icon114.1.png */; };
+		6BD45D3616CE872E008607C2 /* DoubleComponentInPickerViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD45D3516CE872E008607C2 /* DoubleComponentInPickerViewViewController.m */; };
+		6BD45D3816CE8927008607C2 /* DoubleComponentInPickerViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD45D3716CE8927008607C2 /* DoubleComponentInPickerViewViewController.xib */; };
+		6BD45D3C16CE97AC008607C2 /* cardsFolded.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD45D3B16CE97AC008607C2 /* cardsFolded.jpg */; };
+		6BD6B4E116E8CBA800064D8D /* boardBkg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD6B4E016E8CBA800064D8D /* boardBkg2.jpg */; };
+		6BD9145F174122A3004FBCBE /* bottomMenuBtnBkg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD9145D174122A3004FBCBE /* bottomMenuBtnBkg2.png */; };
+		6BD91460174122A3004FBCBE /* bottomMenuBtnHighlightedBkg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD9145E174122A3004FBCBE /* bottomMenuBtnHighlightedBkg2.png */; };
+		6BD9146217412EFE004FBCBE /* boardBkg4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD9146117412EFE004FBCBE /* boardBkg4.png */; };
+		6BD91464174148A6004FBCBE /* CardFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD91463174148A6004FBCBE /* CardFace.png */; };
+		6BE1BBBB16F37B23005B00A4 /* SplashScreen-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1BBB816F37B23005B00A4 /* SplashScreen-568h@2x.png */; };
+		6BE1BBBC16F37B23005B00A4 /* SplashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1BBB916F37B23005B00A4 /* SplashScreen.png */; };
+		6BE1BBBD16F37B23005B00A4 /* SplashScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1BBBA16F37B23005B00A4 /* SplashScreen@2x.png */; };
+		6BE1BBCB16F39A06005B00A4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1BBCA16F39A06005B00A4 /* Default.png */; };
+		6BE1BBCD16F39A0C005B00A4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1BBCC16F39A0C005B00A4 /* Default@2x.png */; };
+		6BE1BBCF16F39A11005B00A4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1BBCE16F39A11005B00A4 /* Default-568h@2x.png */; };
+		6BE1FCD216D26DBB00DA7CE3 /* CardFace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1FCD116D26DBB00DA7CE3 /* CardFace.jpg */; };
+		6BE619AC171C007700493C53 /* PlayersNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE619AA171C007600493C53 /* PlayersNotesViewController.m */; };
+		6BE619AD171C007700493C53 /* PlayersNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE619AB171C007700493C53 /* PlayersNotesViewController.xib */; };
+		6BE619B9171C3B8800493C53 /* playersNotesBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE619B8171C3B8800493C53 /* playersNotesBkg.png */; };
+		6BE619BE171C4E8000493C53 /* deleteBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE619BD171C4E8000493C53 /* deleteBtnBkg.png */; };
+		6BE949B3172AA80B008C1CC8 /* bottomMenuBtnHighlightedBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE949B2172AA80B008C1CC8 /* bottomMenuBtnHighlightedBkg.png */; };
+		6BE949B5172AAA97008C1CC8 /* bottomMenuSmallBtnHighlightedBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE949B4172AAA97008C1CC8 /* bottomMenuSmallBtnHighlightedBkg.png */; };
+		6BE949B8172AAB66008C1CC8 /* topMenuBoardBtnHighlightedBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE949B7172AAB66008C1CC8 /* topMenuBoardBtnHighlightedBkg.png */; };
+		6BE949BA172AABCD008C1CC8 /* topMenuBoardBtnDisabledBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE949B9172AABCD008C1CC8 /* topMenuBoardBtnDisabledBkg.png */; };
+		6BED5CC716F0D11E006E612F /* chipBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BED5CC616F0D11E006E612F /* chipBtn.png */; };
+		6BEEBBBF16DFAB1A0042CC2C /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEEBBBE16DFAB1A0042CC2C /* Session.m */; };
+		6BEEBBC216DFAB2A0042CC2C /* SessionStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEEBBC116DFAB2A0042CC2C /* SessionStats.m */; };
+		6BEEBBC516DFAB3A0042CC2C /* Hand.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEEBBC416DFAB3A0042CC2C /* Hand.m */; };
+		6BEEBBC916DFB18F0042CC2C /* ReviewSessionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEEBBC716DFB18F0042CC2C /* ReviewSessionsViewController.m */; };
+		6BEEBBCA16DFB18F0042CC2C /* ReviewSessionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BEEBBC816DFB18F0042CC2C /* ReviewSessionsViewController.xib */; };
+		6BEEBBCD16DFB42C0042CC2C /* reviewSessionsBkg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BEEBBCC16DFB42C0042CC2C /* reviewSessionsBkg.jpg */; };
+		6BEEBBCF16DFB8280042CC2C /* settingsBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BEEBBCE16DFB8280042CC2C /* settingsBtnBkg.png */; };
+		6BF2DC9C16E62AEF00D615CB /* BoardLandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF2DC9A16E62AEF00D615CB /* BoardLandscapeViewController.m */; };
+		6BF2DC9D16E62AEF00D615CB /* BoardLandscapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF2DC9B16E62AEF00D615CB /* BoardLandscapeViewController.xib */; };
+		6BF2DCA516E6337300D615CB /* UIScrollViewExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF2DCA416E6337300D615CB /* UIScrollViewExtended.m */; };
+		6BF2DCAC16E63A3A00D615CB /* playerBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BF2DCAB16E63A3A00D615CB /* playerBtnBkg.png */; };
+		6BF2DCAE16E6413A00D615CB /* playerBtnSelectedBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BF2DCAD16E6413A00D615CB /* playerBtnSelectedBkg.png */; };
+		6BF2DCB016E6433F00D615CB /* heroBtnBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BF2DCAF16E6433F00D615CB /* heroBtnBkg.png */; };
+		6BF2DCB216E645F200D615CB /* boardCardShirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BF2DCB116E645F200D615CB /* boardCardShirt.png */; };
+		6BF2DCB416E646BD00D615CB /* boardSampleBkg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BF2DCB316E646BD00D615CB /* boardSampleBkg.jpg */; };
+		6BFE01EC16DE669300196E2C /* AddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE01EA16DE669300196E2C /* AddLocationViewController.m */; };
+		6BFE01ED16DE669300196E2C /* AddLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE01EB16DE669300196E2C /* AddLocationViewController.xib */; };
+		6BFE01F016DE66EE00196E2C /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE01EF16DE66EE00196E2C /* Location.m */; };
+		6BFE01F416DE6F5500196E2C /* Shadow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE01F116DE6F5500196E2C /* Shadow1.png */; };
+		6BFE01F516DE6F5500196E2C /* Shadow2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE01F216DE6F5500196E2C /* Shadow2.png */; };
+		6BFE01F616DE6F5500196E2C /* Shadow3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE01F316DE6F5500196E2C /* Shadow3.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6B0506F616CCEA7200719CCB /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = "Poker Live/!CoreData/DataManager.h"; sourceTree = "<group>"; };
+		6B0506F716CCEA7200719CCB /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = "Poker Live/!CoreData/DataManager.m"; sourceTree = "<group>"; };
+		6B0506FA16CCEB8600719CCB /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = "Poker Live/!CoreData/Settings.h"; sourceTree = "<group>"; };
+		6B0506FB16CCEB8600719CCB /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = "Poker Live/!CoreData/Settings.m"; sourceTree = "<group>"; };
+		6B0506FD16CCEEF900719CCB /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoardViewController.h; path = "!Classes/BoardViewController.h"; sourceTree = "<group>"; };
+		6B0506FE16CCEEF900719CCB /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BoardViewController.m; path = "!Classes/BoardViewController.m"; sourceTree = "<group>"; };
+		6B0506FF16CCEEF900719CCB /* BoardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BoardViewController.xib; path = "!Classes/BoardViewController.xib"; sourceTree = "<group>"; };
+		6B05070316CD2D3000719CCB /* CardShirt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = CardShirt.jpg; path = "Poker Live/!Images/!Common/CardShirt.jpg"; sourceTree = "<group>"; };
+		6B05070616CD3EFE00719CCB /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = "Poker Live/!CoreData/Player.h"; sourceTree = "<group>"; };
+		6B05070716CD3EFE00719CCB /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = "Poker Live/!CoreData/Player.m"; sourceTree = "<group>"; };
+		6B166CD11728277E00F5FD50 /* topMenuBoardBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topMenuBoardBkg.png; path = "Poker Live/!Images/!BoardVC/topMenuBoardBkg.png"; sourceTree = "<group>"; };
+		6B166CD3172827E900F5FD50 /* topMenuBoardBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topMenuBoardBtnBkg.png; path = "Poker Live/!Images/!BoardVC/topMenuBoardBtnBkg.png"; sourceTree = "<group>"; };
+		6B166CD5172828AE00F5FD50 /* topMenuBoardBetBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topMenuBoardBetBkg.png; path = "Poker Live/!Images/!BoardVC/topMenuBoardBetBkg.png"; sourceTree = "<group>"; };
+		6B166CD717282ECD00F5FD50 /* boardBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boardBkg.png; path = "Poker Live/!Images/!BoardVC/boardBkg.png"; sourceTree = "<group>"; };
+		6B166CD9172830C200F5FD50 /* bottomMenuBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bottomMenuBtnBkg.png; path = "Poker Live/!Images/!BoardVC/bottomMenuBtnBkg.png"; sourceTree = "<group>"; };
+		6B166CDB1728322800F5FD50 /* bottomMenuBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bottomMenuBkg.png; path = "Poker Live/!Images/!BoardVC/bottomMenuBkg.png"; sourceTree = "<group>"; };
+		6B166CDD1728333200F5FD50 /* bottomMenuTextBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bottomMenuTextBkg.png; path = "Poker Live/!Images/!BoardVC/bottomMenuTextBkg.png"; sourceTree = "<group>"; };
+		6B166CDF172835D000F5FD50 /* bottomMenuSmallBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bottomMenuSmallBtnBkg.png; path = "Poker Live/!Images/!BoardVC/bottomMenuSmallBtnBkg.png"; sourceTree = "<group>"; };
+		6B166CE117283E0F00F5FD50 /* boardBkg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boardBkg3.png; path = "Poker Live/!Images/!BoardVC/boardBkg3.png"; sourceTree = "<group>"; };
+		6B1D75171725722F00A48D22 /* Products.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Products.plist; sourceTree = "<group>"; };
+		6B1D75191725771500A48D22 /* viewBtnOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = viewBtnOff.png; path = "Poker Live/!Images/!StoreVC/viewBtnOff.png"; sourceTree = "<group>"; };
+		6B1D751C1725779100A48D22 /* viewBtnOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = viewBtnOn.png; path = "Poker Live/!Images/!StoreVC/viewBtnOn.png"; sourceTree = "<group>"; };
+		6B1D751E1725783900A48D22 /* separator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = separator.png; path = "Poker Live/!Images/!StoreVC/separator.png"; sourceTree = "<group>"; };
+		6B1D75211725807A00A48D22 /* labelBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = labelBkg.png; path = "Poker Live/!Images/!StoreVC/labelBkg.png"; sourceTree = "<group>"; };
+		6B1D75221725807A00A48D22 /* storeModalBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = storeModalBkg.png; path = "Poker Live/!Images/!StoreVC/storeModalBkg.png"; sourceTree = "<group>"; };
+		6B1D75251725840600A48D22 /* storeTitleBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = storeTitleBkg.png; path = "Poker Live/!Images/!StoreVC/storeTitleBkg.png"; sourceTree = "<group>"; };
+		6B1D752717258A0800A48D22 /* appStoreBuyNow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appStoreBuyNow.png; path = "Poker Live/!Images/!Common/appStoreBuyNow.png"; sourceTree = "<group>"; };
+		6B207CCB17035405002D8986 /* CardsPickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsPickerVC.h; sourceTree = "<group>"; };
+		6B207CCC17035405002D8986 /* CardsPickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsPickerVC.m; sourceTree = "<group>"; };
+		6B207CCD17035405002D8986 /* CardsPickerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardsPickerVC.xib; sourceTree = "<group>"; };
+		6B207CD117035802002D8986 /* cardPickerBtnBkg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cardPickerBtnBkg.jpg; path = "Poker Live/!Images/CardPickerVC/cardPickerBtnBkg.jpg"; sourceTree = "<group>"; };
+		6B207CD317035904002D8986 /* cardPickerBackspaceBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardPickerBackspaceBkg.png; path = "Poker Live/!Images/CardPickerVC/cardPickerBackspaceBkg.png"; sourceTree = "<group>"; };
+		6B207CD517035A5C002D8986 /* cardPickerTitleBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardPickerTitleBkg.png; path = "Poker Live/!Images/CardPickerVC/cardPickerTitleBkg.png"; sourceTree = "<group>"; };
+		6B207CD717035B45002D8986 /* cardPickerCardsLabelBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardPickerCardsLabelBkg.png; path = "Poker Live/!Images/CardPickerVC/cardPickerCardsLabelBkg.png"; sourceTree = "<group>"; };
+		6B207CD917035F24002D8986 /* cardPickerGreyBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardPickerGreyBtnBkg.png; path = "Poker Live/!Images/CardPickerVC/cardPickerGreyBtnBkg.png"; sourceTree = "<group>"; };
+		6B207CDB17036344002D8986 /* cardPickerWhiteBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardPickerWhiteBtnBkg.png; path = "Poker Live/!Images/CardPickerVC/cardPickerWhiteBtnBkg.png"; sourceTree = "<group>"; };
+		6B3A6B5716CBEFDE00020F04 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = "!Classes/SettingsViewController.h"; sourceTree = "<group>"; };
+		6B3A6B5816CBEFDE00020F04 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = "!Classes/SettingsViewController.m"; sourceTree = "<group>"; };
+		6B3A6B5916CBEFDE00020F04 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = "!Classes/SettingsViewController.xib"; sourceTree = "<group>"; };
+		6B3A6B5F16CBF7A500020F04 /* menuButtonBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButtonBg.png; sourceTree = "<group>"; };
+		6B3A6B6016CBF7A500020F04 /* menuButtonBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuButtonBg@2x.png"; sourceTree = "<group>"; };
+		6B3A6B6116CBF7A500020F04 /* ModalBg-Bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ModalBg-Bottom.png"; sourceTree = "<group>"; };
+		6B3A6B6216CBF7A500020F04 /* pickerViewBg-Top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pickerViewBg-Top.png"; sourceTree = "<group>"; };
+		6B3A6B6316CBF7A500020F04 /* pickerViewBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickerViewBg.png; sourceTree = "<group>"; };
+		6B3A6B6916CBF81400020F04 /* topMenuBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topMenuBkg.png; sourceTree = "<group>"; };
+		6B3A6B6A16CBF81400020F04 /* topMenuBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topMenuBtnBkg.png; sourceTree = "<group>"; };
+		6B41B13916CBE8EE009A005D /* LiveHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B41B13C16CBE8EE009A005D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6B41B13E16CBE8EE009A005D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6B41B14016CBE8EE009A005D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6B41B14216CBE8EE009A005D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6B41B14616CBE8EE009A005D /* Live Poker Stats-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Live Poker Stats-Info.plist"; sourceTree = "<group>"; };
+		6B41B14816CBE8EE009A005D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B41B14A16CBE8EE009A005D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B41B14C16CBE8EE009A005D /* LivePokerStats-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LivePokerStats-Prefix.pch"; sourceTree = "<group>"; };
+		6B41B14D16CBE8EE009A005D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6B41B14E16CBE8EE009A005D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6B41B15016CBE8EE009A005D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6B41B15216CBE8EE009A005D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6B41B15416CBE8EE009A005D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6B41B15716CBE8EE009A005D /* Poker_Live.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Poker_Live.xcdatamodel; sourceTree = "<group>"; };
+		6B41B16116CBEA6A009A005D /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = "!Classes/HomePageViewController.h"; sourceTree = "<group>"; };
+		6B41B16216CBEA6A009A005D /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = "!Classes/HomePageViewController.m"; sourceTree = "<group>"; };
+		6B41B16316CBEA6A009A005D /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePageViewController.xib; path = "!Classes/HomePageViewController.xib"; sourceTree = "<group>"; };
+		6B41B16816CBEABB009A005D /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
+		6B41B16916CBEABB009A005D /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
+		6B41B16B16CBEABB009A005D /* PickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerVC.h; sourceTree = "<group>"; };
+		6B41B16C16CBEABB009A005D /* PickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerVC.m; sourceTree = "<group>"; };
+		6B41B16D16CBEABB009A005D /* PickerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerVC.xib; sourceTree = "<group>"; };
+		6B5CAEC216DD0A92007D0D02 /* settingsDoneBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsDoneBtnBkg.png; path = "Poker Live/!Images/!SettingsVC/settingsDoneBtnBkg.png"; sourceTree = "<group>"; };
+		6BB4EC4C171D7A6B002C703E /* AirshipConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = AirshipConfig.plist; sourceTree = "<group>"; };
+		6BB4EDC5171D7BF1002C703E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6BB4EDC7171D7C14002C703E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6BB4EDC9171D7C1E002C703E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6BB4EDCB171D7C28002C703E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6BB4EDCD171D7C6B002C703E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6BB4EDCF171D7C74002C703E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6BB4EDD1171D7C7C002C703E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6BB4EDD3171D7C82002C703E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6BB4EDD5171D7C88002C703E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6BB4EDD7171D7C8D002C703E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		6BB4EDD9171D7C93002C703E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6BB4EDDB171D7CA3002C703E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6BB4EE00171D9776002C703E /* commercialDoneBtnOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = commercialDoneBtnOff.png; sourceTree = "<group>"; };
+		6BB4EE01171D9776002C703E /* commercialDoneBtnOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = commercialDoneBtnOn.png; sourceTree = "<group>"; };
+		6BB8D8E9171EE34E003E4A70 /* commercial1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = commercial1; sourceTree = "<group>"; };
+		6BB8D8EA171EE34E003E4A70 /* commercial2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = commercial2; sourceTree = "<group>"; };
+		6BB8D8EB171EE34E003E4A70 /* commercial3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = commercial3; sourceTree = "<group>"; };
+		6BB8D8F1171EF0F1003E4A70 /* commercial.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = commercial.plist; sourceTree = "<group>"; };
+		6BBD61E216EE29C30031222C /* heroBtnBkgSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heroBtnBkgSelected.png; path = "Poker Live/!Images/!BoardVC/heroBtnBkgSelected.png"; sourceTree = "<group>"; };
+		6BC0D7C6170EC9590074CE4E /* NotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesViewController.h; sourceTree = "<group>"; };
+		6BC0D7C7170EC9590074CE4E /* NotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesViewController.m; sourceTree = "<group>"; };
+		6BC0D7C8170EC9590074CE4E /* NotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesViewController.xib; sourceTree = "<group>"; };
+		6BC0D7CB170EE9CB0074CE4E /* ShadowUpToDown1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShadowUpToDown1.png; path = "Poker Live/!Images/!Common/ShadowUpToDown1.png"; sourceTree = "<group>"; };
+		6BC532CD1721896500242A9A /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IAPHelper.h; path = "Poker Live/!In-App/IAPHelper.h"; sourceTree = "<group>"; };
+		6BC532CE1721896500242A9A /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IAPHelper.m; path = "Poker Live/!In-App/IAPHelper.m"; sourceTree = "<group>"; };
+		6BC532D017218D4000242A9A /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreViewController.h; path = "!Classes/StoreViewController.h"; sourceTree = "<group>"; };
+		6BC532D117218D4000242A9A /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoreViewController.m; path = "!Classes/StoreViewController.m"; sourceTree = "<group>"; };
+		6BC532D217218D4000242A9A /* StoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StoreViewController.xib; path = "!Classes/StoreViewController.xib"; sourceTree = "<group>"; };
+		6BC532D617218E1C00242A9A /* storeVCBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = storeVCBackground.png; path = "Poker Live/!Images/!StoreVC/storeVCBackground.png"; sourceTree = "<group>"; };
+		6BC532D81721965400242A9A /* RageIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RageIAPHelper.h; path = "Poker Live/!In-App/RageIAPHelper.h"; sourceTree = "<group>"; };
+		6BC532D91721965400242A9A /* RageIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RageIAPHelper.m; path = "Poker Live/!In-App/RageIAPHelper.m"; sourceTree = "<group>"; };
+		6BC9350B16DBCA4D00D48EBF /* mainMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuBackground.png; path = "Poker Live/!Images/!MainMenu/mainMenuBackground.png"; sourceTree = "<group>"; };
+		6BC9350D16DBD2A300D48EBF /* mainMenuConfigBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuConfigBtn.png; path = "Poker Live/!Images/!MainMenu/mainMenuConfigBtn.png"; sourceTree = "<group>"; };
+		6BC9350E16DBD2A300D48EBF /* mainMenuHelpBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuHelpBtn.png; path = "Poker Live/!Images/!MainMenu/mainMenuHelpBtn.png"; sourceTree = "<group>"; };
+		6BC9350F16DBD2A300D48EBF /* mainMenuNotesBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuNotesBtn.png; path = "Poker Live/!Images/!MainMenu/mainMenuNotesBtn.png"; sourceTree = "<group>"; };
+		6BC9351016DBD2A300D48EBF /* mainMenuPreviewPreviousBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuPreviewPreviousBtn.png; path = "Poker Live/!Images/!MainMenu/mainMenuPreviewPreviousBtn.png"; sourceTree = "<group>"; };
+		6BC9351116DBD2A300D48EBF /* mainMenuStartBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuStartBtn.png; path = "Poker Live/!Images/!MainMenu/mainMenuStartBtn.png"; sourceTree = "<group>"; };
+		6BC9351A16DCF2B600D48EBF /* mainMenuSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuSettings.png; path = "Poker Live/!Images/!MainMenu/mainMenuSettings.png"; sourceTree = "<group>"; };
+		6BC9351C16DCF53600D48EBF /* leftArrowBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leftArrowBkg.png; path = "Poker Live/!Images/!Common/leftArrowBkg.png"; sourceTree = "<group>"; };
+		6BC9351D16DCF53600D48EBF /* rightArrowBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightArrowBkg.png; path = "Poker Live/!Images/!Common/rightArrowBkg.png"; sourceTree = "<group>"; };
+		6BC9352116DCF6F600D48EBF /* settingsBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsBkg.png; path = "Poker Live/!Images/!SettingsVC/settingsBkg.png"; sourceTree = "<group>"; };
+		6BC9352216DCF6F600D48EBF /* settingsHeadTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsHeadTitle.png; path = "Poker Live/!Images/!SettingsVC/settingsHeadTitle.png"; sourceTree = "<group>"; };
+		6BC9352516DCF74000D48EBF /* backBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backBtnBkg.png; path = "Poker Live/!Images/!Common/backBtnBkg.png"; sourceTree = "<group>"; };
+		6BC9352616DCF74000D48EBF /* greenBallBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenBallBkg.png; path = "Poker Live/!Images/!Common/greenBallBkg.png"; sourceTree = "<group>"; };
+		6BCDFEC317293136004934BB /* statOpenSeatBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = statOpenSeatBkg.png; path = "Poker Live/!Images/!BoardVC/statOpenSeatBkg.png"; sourceTree = "<group>"; };
+		6BCDFEC417293136004934BB /* statPlayerBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = statPlayerBkg.png; path = "Poker Live/!Images/!BoardVC/statPlayerBkg.png"; sourceTree = "<group>"; };
+		6BCDFEC517293136004934BB /* statPlayerSelectedBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = statPlayerSelectedBkg.png; path = "Poker Live/!Images/!BoardVC/statPlayerSelectedBkg.png"; sourceTree = "<group>"; };
+		6BD2BA0A1746761A00546FF7 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		6BD4138216E101370057A5C0 /* StatsForSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsForSessionViewController.h; path = "!Classes/StatsForSessionViewController.h"; sourceTree = "<group>"; };
+		6BD4138316E101370057A5C0 /* StatsForSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatsForSessionViewController.m; path = "!Classes/StatsForSessionViewController.m"; sourceTree = "<group>"; };
+		6BD4138416E101370057A5C0 /* StatsForSessionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StatsForSessionViewController.xib; path = "!Classes/StatsForSessionViewController.xib"; sourceTree = "<group>"; };
+		6BD4138816E101DB0057A5C0 /* statsForSessionBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = statsForSessionBkg.png; path = "Poker Live/!Images/!StatsForSessionVC/statsForSessionBkg.png"; sourceTree = "<group>"; };
+		6BD4138A16E102BD0057A5C0 /* statsBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = statsBtnBkg.png; path = "Poker Live/!Images/!StatsForSessionVC/statsBtnBkg.png"; sourceTree = "<group>"; };
+		6BD4138E16E10F2C0057A5C0 /* HandsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HandsViewController.h; path = "!Classes/HandsViewController.h"; sourceTree = "<group>"; };
+		6BD4138F16E10F2C0057A5C0 /* HandsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HandsViewController.m; path = "!Classes/HandsViewController.m"; sourceTree = "<group>"; };
+		6BD4139016E10F2C0057A5C0 /* HandsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HandsViewController.xib; path = "!Classes/HandsViewController.xib"; sourceTree = "<group>"; };
+		6BD4139416E10F440057A5C0 /* sessionVCbkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sessionVCbkg.png; path = "Poker Live/!Images/!SessionVC/sessionVCbkg.png"; sourceTree = "<group>"; };
+		6BD45D2E16CE71FE008607C2 /* icon57.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.1.png; sourceTree = "<group>"; };
+		6BD45D3016CE7202008607C2 /* icon114.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.1.png; sourceTree = "<group>"; };
+		6BD45D3416CE872E008607C2 /* DoubleComponentInPickerViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubleComponentInPickerViewViewController.h; path = "Poker Live/!Utilities/DoublePicker/DoubleComponentInPickerViewViewController.h"; sourceTree = "<group>"; };
+		6BD45D3516CE872E008607C2 /* DoubleComponentInPickerViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubleComponentInPickerViewViewController.m; path = "Poker Live/!Utilities/DoublePicker/DoubleComponentInPickerViewViewController.m"; sourceTree = "<group>"; };
+		6BD45D3716CE8927008607C2 /* DoubleComponentInPickerViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DoubleComponentInPickerViewViewController.xib; path = "Poker Live/!Utilities/DoublePicker/DoubleComponentInPickerViewViewController.xib"; sourceTree = "<group>"; };
+		6BD45D3B16CE97AC008607C2 /* cardsFolded.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cardsFolded.jpg; path = "Poker Live/!Images/!Common/cardsFolded.jpg"; sourceTree = "<group>"; };
+		6BD6B4E016E8CBA800064D8D /* boardBkg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = boardBkg2.jpg; path = "Poker Live/!Images/!BoardVC/boardBkg2.jpg"; sourceTree = "<group>"; };
+		6BD9145D174122A3004FBCBE /* bottomMenuBtnBkg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bottomMenuBtnBkg2.png; path = "Poker Live/!Images/!BoardVC/bottomMenuBtnBkg2.png"; sourceTree = "<group>"; };
+		6BD9145E174122A3004FBCBE /* bottomMenuBtnHighlightedBkg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bottomMenuBtnHighlightedBkg2.png; path = "Poker Live/!Images/!BoardVC/bottomMenuBtnHighlightedBkg2.png"; sourceTree = "<group>"; };
+		6BD9146117412EFE004FBCBE /* boardBkg4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boardBkg4.png; path = "Poker Live/!Images/!BoardVC/boardBkg4.png"; sourceTree = "<group>"; };
+		6BD91463174148A6004FBCBE /* CardFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CardFace.png; path = "Poker Live/!Images/!Common/CardFace.png"; sourceTree = "<group>"; };
+		6BE1BBB816F37B23005B00A4 /* SplashScreen-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen-568h@2x.png"; sourceTree = "<group>"; };
+		6BE1BBB916F37B23005B00A4 /* SplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen.png; sourceTree = "<group>"; };
+		6BE1BBBA16F37B23005B00A4 /* SplashScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen@2x.png"; sourceTree = "<group>"; };
+		6BE1BBCA16F39A06005B00A4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6BE1BBCC16F39A0C005B00A4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6BE1BBCE16F39A11005B00A4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6BE1FCD116D26DBB00DA7CE3 /* CardFace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = CardFace.jpg; path = "Poker Live/!Images/!Common/CardFace.jpg"; sourceTree = "<group>"; };
+		6BE619A9171C007600493C53 /* PlayersNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayersNotesViewController.h; path = "!Classes/PlayersNotesViewController.h"; sourceTree = "<group>"; };
+		6BE619AA171C007600493C53 /* PlayersNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayersNotesViewController.m; path = "!Classes/PlayersNotesViewController.m"; sourceTree = "<group>"; };
+		6BE619AB171C007700493C53 /* PlayersNotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayersNotesViewController.xib; path = "!Classes/PlayersNotesViewController.xib"; sourceTree = "<group>"; };
+		6BE619B8171C3B8800493C53 /* playersNotesBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playersNotesBkg.png; sourceTree = "<group>"; };
+		6BE619BD171C4E8000493C53 /* deleteBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = deleteBtnBkg.png; path = "Poker Live/!Images/!ReviewSessionsVC/deleteBtnBkg.png"; sourceTree = "<group>"; };
+		6BE949B2172AA80B008C1CC8 /* bottomMenuBtnHighlightedBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bottomMenuBtnHighlightedBkg.png; path = "Poker Live/!Images/!BoardVC/bottomMenuBtnHighlightedBkg.png"; sourceTree = "<group>"; };
+		6BE949B4172AAA97008C1CC8 /* bottomMenuSmallBtnHighlightedBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bottomMenuSmallBtnHighlightedBkg.png; path = "Poker Live/!Images/!BoardVC/bottomMenuSmallBtnHighlightedBkg.png"; sourceTree = "<group>"; };
+		6BE949B7172AAB66008C1CC8 /* topMenuBoardBtnHighlightedBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topMenuBoardBtnHighlightedBkg.png; path = "Poker Live/!Images/!BoardVC/topMenuBoardBtnHighlightedBkg.png"; sourceTree = "<group>"; };
+		6BE949B9172AABCD008C1CC8 /* topMenuBoardBtnDisabledBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topMenuBoardBtnDisabledBkg.png; path = "Poker Live/!Images/!BoardVC/topMenuBoardBtnDisabledBkg.png"; sourceTree = "<group>"; };
+		6BED5CC616F0D11E006E612F /* chipBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chipBtn.png; path = "Poker Live/!Images/!BoardVC/chipBtn.png"; sourceTree = "<group>"; };
+		6BEEBBBD16DFAB1A0042CC2C /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Session.h; path = "Poker Live/!CoreData/Session.h"; sourceTree = "<group>"; };
+		6BEEBBBE16DFAB1A0042CC2C /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session.m; path = "Poker Live/!CoreData/Session.m"; sourceTree = "<group>"; };
+		6BEEBBC016DFAB2A0042CC2C /* SessionStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionStats.h; path = "Poker Live/!CoreData/SessionStats.h"; sourceTree = "<group>"; };
+		6BEEBBC116DFAB2A0042CC2C /* SessionStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionStats.m; path = "Poker Live/!CoreData/SessionStats.m"; sourceTree = "<group>"; };
+		6BEEBBC316DFAB3A0042CC2C /* Hand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hand.h; path = "Poker Live/!CoreData/Hand.h"; sourceTree = "<group>"; };
+		6BEEBBC416DFAB3A0042CC2C /* Hand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hand.m; path = "Poker Live/!CoreData/Hand.m"; sourceTree = "<group>"; };
+		6BEEBBC616DFB18F0042CC2C /* ReviewSessionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReviewSessionsViewController.h; path = "!Classes/ReviewSessionsViewController.h"; sourceTree = "<group>"; };
+		6BEEBBC716DFB18F0042CC2C /* ReviewSessionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReviewSessionsViewController.m; path = "!Classes/ReviewSessionsViewController.m"; sourceTree = "<group>"; };
+		6BEEBBC816DFB18F0042CC2C /* ReviewSessionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewSessionsViewController.xib; path = "!Classes/ReviewSessionsViewController.xib"; sourceTree = "<group>"; };
+		6BEEBBCC16DFB42C0042CC2C /* reviewSessionsBkg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = reviewSessionsBkg.jpg; path = "Poker Live/!Images/!ReviewSessionsVC/reviewSessionsBkg.jpg"; sourceTree = "<group>"; };
+		6BEEBBCE16DFB8280042CC2C /* settingsBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsBtnBkg.png; path = "Poker Live/!Images/!Common/settingsBtnBkg.png"; sourceTree = "<group>"; };
+		6BF2DC9916E62AEF00D615CB /* BoardLandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoardLandscapeViewController.h; path = "!Classes/BoardLandscapeViewController.h"; sourceTree = "<group>"; };
+		6BF2DC9A16E62AEF00D615CB /* BoardLandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BoardLandscapeViewController.m; path = "!Classes/BoardLandscapeViewController.m"; sourceTree = "<group>"; };
+		6BF2DC9B16E62AEF00D615CB /* BoardLandscapeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BoardLandscapeViewController.xib; path = "!Classes/BoardLandscapeViewController.xib"; sourceTree = "<group>"; };
+		6BF2DCA316E6337300D615CB /* UIScrollViewExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIScrollViewExtended.h; path = "Poker Live/!Utilities/UIScrollViewExtended/UIScrollViewExtended.h"; sourceTree = "<group>"; };
+		6BF2DCA416E6337300D615CB /* UIScrollViewExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIScrollViewExtended.m; path = "Poker Live/!Utilities/UIScrollViewExtended/UIScrollViewExtended.m"; sourceTree = "<group>"; };
+		6BF2DCAB16E63A3A00D615CB /* playerBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playerBtnBkg.png; path = "Poker Live/!Images/!BoardVC/playerBtnBkg.png"; sourceTree = "<group>"; };
+		6BF2DCAD16E6413A00D615CB /* playerBtnSelectedBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playerBtnSelectedBkg.png; path = "Poker Live/!Images/!BoardVC/playerBtnSelectedBkg.png"; sourceTree = "<group>"; };
+		6BF2DCAF16E6433F00D615CB /* heroBtnBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heroBtnBkg.png; path = "Poker Live/!Images/!BoardVC/heroBtnBkg.png"; sourceTree = "<group>"; };
+		6BF2DCB116E645F200D615CB /* boardCardShirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boardCardShirt.png; path = "Poker Live/!Images/!BoardVC/boardCardShirt.png"; sourceTree = "<group>"; };
+		6BF2DCB316E646BD00D615CB /* boardSampleBkg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = boardSampleBkg.jpg; path = "Poker Live/!Images/!BoardVC/boardSampleBkg.jpg"; sourceTree = "<group>"; };
+		6BFE01E916DE669300196E2C /* AddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLocationViewController.h; sourceTree = "<group>"; };
+		6BFE01EA16DE669300196E2C /* AddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLocationViewController.m; sourceTree = "<group>"; };
+		6BFE01EB16DE669300196E2C /* AddLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLocationViewController.xib; sourceTree = "<group>"; };
+		6BFE01EE16DE66EE00196E2C /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = "Poker Live/!CoreData/Location.h"; sourceTree = "<group>"; };
+		6BFE01EF16DE66EE00196E2C /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = "Poker Live/!CoreData/Location.m"; sourceTree = "<group>"; };
+		6BFE01F116DE6F5500196E2C /* Shadow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shadow1.png; path = "Poker Live/!Images/!Common/Shadow1.png"; sourceTree = "<group>"; };
+		6BFE01F216DE6F5500196E2C /* Shadow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shadow2.png; path = "Poker Live/!Images/!Common/Shadow2.png"; sourceTree = "<group>"; };
+		6BFE01F316DE6F5500196E2C /* Shadow3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shadow3.png; path = "Poker Live/!Images/!Common/Shadow3.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B41B13616CBE8EE009A005D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BB4EDD4171D7C82002C703E /* StoreKit.framework in Frameworks */,
+				6BB4EDDC171D7CA4002C703E /* MapKit.framework in Frameworks */,
+				6BB4EDDA171D7C93002C703E /* AudioToolbox.framework in Frameworks */,
+				6BB4EDD8171D7C8D002C703E /* MessageUI.framework in Frameworks */,
+				6BB4EDD6171D7C88002C703E /* CoreLocation.framework in Frameworks */,
+				6BB4EDD2171D7C7C002C703E /* CoreTelephony.framework in Frameworks */,
+				6BB4EDD0171D7C74002C703E /* libsqlite3.dylib in Frameworks */,
+				6BB4EDCE171D7C6B002C703E /* libz.dylib in Frameworks */,
+				6B41B13D16CBE8EE009A005D /* UIKit.framework in Frameworks */,
+				6BB4EDCC171D7C28002C703E /* SystemConfiguration.framework in Frameworks */,
+				6BB4EDCA171D7C1E002C703E /* Security.framework in Frameworks */,
+				6BB4EDC8171D7C14002C703E /* MobileCoreServices.framework in Frameworks */,
+				6BB4EDC6171D7BF1002C703E /* CFNetwork.framework in Frameworks */,
+				6B41B13F16CBE8EE009A005D /* Foundation.framework in Frameworks */,
+				6B41B14116CBE8EE009A005D /* CoreGraphics.framework in Frameworks */,
+				6B41B14316CBE8EE009A005D /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B05070216CD2D2500719CCB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6BD91463174148A6004FBCBE /* CardFace.png */,
+				6B1D752717258A0800A48D22 /* appStoreBuyNow.png */,
+				6BC0D7CB170EE9CB0074CE4E /* ShadowUpToDown1.png */,
+				6BEEBBCE16DFB8280042CC2C /* settingsBtnBkg.png */,
+				6BFE01F116DE6F5500196E2C /* Shadow1.png */,
+				6BFE01F216DE6F5500196E2C /* Shadow2.png */,
+				6BFE01F316DE6F5500196E2C /* Shadow3.png */,
+				6BC9352516DCF74000D48EBF /* backBtnBkg.png */,
+				6BC9352616DCF74000D48EBF /* greenBallBkg.png */,
+				6BC9351C16DCF53600D48EBF /* leftArrowBkg.png */,
+				6BC9351D16DCF53600D48EBF /* rightArrowBkg.png */,
+				6BE1FCD116D26DBB00DA7CE3 /* CardFace.jpg */,
+				6BD45D3B16CE97AC008607C2 /* cardsFolded.jpg */,
+				6B05070316CD2D3000719CCB /* CardShirt.jpg */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		6B207CCA17035405002D8986 /* CardsPicker */ = {
+			isa = PBXGroup;
+			children = (
+				6B207CCB17035405002D8986 /* CardsPickerVC.h */,
+				6B207CCC17035405002D8986 /* CardsPickerVC.m */,
+				6B207CCD17035405002D8986 /* CardsPickerVC.xib */,
+			);
+			name = CardsPicker;
+			path = "Poker Live/!Utilities/CardsPicker";
+			sourceTree = "<group>";
+		};
+		6B207CD0170357EF002D8986 /* CardPicker */ = {
+			isa = PBXGroup;
+			children = (
+				6B207CDB17036344002D8986 /* cardPickerWhiteBtnBkg.png */,
+				6B207CD917035F24002D8986 /* cardPickerGreyBtnBkg.png */,
+				6B207CD717035B45002D8986 /* cardPickerCardsLabelBkg.png */,
+				6B207CD517035A5C002D8986 /* cardPickerTitleBkg.png */,
+				6B207CD317035904002D8986 /* cardPickerBackspaceBkg.png */,
+				6B207CD117035802002D8986 /* cardPickerBtnBkg.jpg */,
+			);
+			name = CardPicker;
+			sourceTree = "<group>";
+		};
+		6B3A6B5C16CBF76100020F04 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6BC532D517218E0A00242A9A /* StoreVC */,
+				6BB4EDDD171D83BD002C703E /* Commercial */,
+				6BE619B7171C3B8800493C53 /* PlayersNotesVC */,
+				6B207CD0170357EF002D8986 /* CardPicker */,
+				6BE1BBB716F37B23005B00A4 /* Splash */,
+				6BF2DC9E16E62B8A00D615CB /* BoardVC */,
+				6BD4139316E10F340057A5C0 /* HandsVC */,
+				6BD4138716E101C80057A5C0 /* StatsForSession */,
+				6BEEBBCB16DFB41D0042CC2C /* Review Sessions */,
+				6BC9352016DCF6E100D48EBF /* Settings */,
+				6BC9350A16DBCA4200D48EBF /* MainMenu */,
+				6B05070216CD2D2500719CCB /* Common */,
+				6B3A6B5E16CBF7A500020F04 /* PickerView */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		6B3A6B5E16CBF7A500020F04 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				6B3A6B6916CBF81400020F04 /* topMenuBkg.png */,
+				6B3A6B6A16CBF81400020F04 /* topMenuBtnBkg.png */,
+				6B3A6B5F16CBF7A500020F04 /* menuButtonBg.png */,
+				6B3A6B6016CBF7A500020F04 /* menuButtonBg@2x.png */,
+				6B3A6B6116CBF7A500020F04 /* ModalBg-Bottom.png */,
+				6B3A6B6216CBF7A500020F04 /* pickerViewBg-Top.png */,
+				6B3A6B6316CBF7A500020F04 /* pickerViewBg.png */,
+			);
+			name = PickerView;
+			path = "Poker Live/!Images/PickerView";
+			sourceTree = "<group>";
+		};
+		6B41B13016CBE8EE009A005D = {
+			isa = PBXGroup;
+			children = (
+				6BD2BA0A1746761A00546FF7 /* iTunesArtwork */,
+				6B1D75171725722F00A48D22 /* Products.plist */,
+				6BB8D8F1171EF0F1003E4A70 /* commercial.plist */,
+				6BB4EC4C171D7A6B002C703E /* AirshipConfig.plist */,
+				6BE1BBCE16F39A11005B00A4 /* Default-568h@2x.png */,
+				6BE1BBCC16F39A0C005B00A4 /* Default@2x.png */,
+				6BE1BBCA16F39A06005B00A4 /* Default.png */,
+				6BD45D3016CE7202008607C2 /* icon114.1.png */,
+				6BD45D2E16CE71FE008607C2 /* icon57.1.png */,
+				6BC532CC1721891100242A9A /* In-App */,
+				6B3A6B5C16CBF76100020F04 /* Images */,
+				6B41B16616CBEA99009A005D /* Utilities */,
+				6B41B16016CBE9B1009A005D /* CoreData */,
+				6B41B14416CBE8EE009A005D /* Poker Live */,
+				6B41B13B16CBE8EE009A005D /* Frameworks */,
+				6B41B13A16CBE8EE009A005D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B41B13A16CBE8EE009A005D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B41B13916CBE8EE009A005D /* LiveHUD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B41B13B16CBE8EE009A005D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BB4EDDB171D7CA3002C703E /* MapKit.framework */,
+				6BB4EDD9171D7C93002C703E /* AudioToolbox.framework */,
+				6BB4EDD7171D7C8D002C703E /* MessageUI.framework */,
+				6BB4EDD5171D7C88002C703E /* CoreLocation.framework */,
+				6BB4EDD3171D7C82002C703E /* StoreKit.framework */,
+				6BB4EDD1171D7C7C002C703E /* CoreTelephony.framework */,
+				6BB4EDCF171D7C74002C703E /* libsqlite3.dylib */,
+				6BB4EDCD171D7C6B002C703E /* libz.dylib */,
+				6BB4EDCB171D7C28002C703E /* SystemConfiguration.framework */,
+				6BB4EDC9171D7C1E002C703E /* Security.framework */,
+				6BB4EDC7171D7C14002C703E /* MobileCoreServices.framework */,
+				6BB4EDC5171D7BF1002C703E /* CFNetwork.framework */,
+				6B41B13C16CBE8EE009A005D /* UIKit.framework */,
+				6B41B13E16CBE8EE009A005D /* Foundation.framework */,
+				6B41B14016CBE8EE009A005D /* CoreGraphics.framework */,
+				6B41B14216CBE8EE009A005D /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B41B14416CBE8EE009A005D /* Poker Live */ = {
+			isa = PBXGroup;
+			children = (
+				6BF2DC9916E62AEF00D615CB /* BoardLandscapeViewController.h */,
+				6BF2DC9A16E62AEF00D615CB /* BoardLandscapeViewController.m */,
+				6BF2DC9B16E62AEF00D615CB /* BoardLandscapeViewController.xib */,
+				6BC532D017218D4000242A9A /* StoreViewController.h */,
+				6BC532D117218D4000242A9A /* StoreViewController.m */,
+				6BC532D217218D4000242A9A /* StoreViewController.xib */,
+				6BE619A9171C007600493C53 /* PlayersNotesViewController.h */,
+				6BE619AA171C007600493C53 /* PlayersNotesViewController.m */,
+				6BE619AB171C007700493C53 /* PlayersNotesViewController.xib */,
+				6BD4138E16E10F2C0057A5C0 /* HandsViewController.h */,
+				6BD4138F16E10F2C0057A5C0 /* HandsViewController.m */,
+				6BD4139016E10F2C0057A5C0 /* HandsViewController.xib */,
+				6BD4138216E101370057A5C0 /* StatsForSessionViewController.h */,
+				6BD4138316E101370057A5C0 /* StatsForSessionViewController.m */,
+				6BD4138416E101370057A5C0 /* StatsForSessionViewController.xib */,
+				6BEEBBC616DFB18F0042CC2C /* ReviewSessionsViewController.h */,
+				6BEEBBC716DFB18F0042CC2C /* ReviewSessionsViewController.m */,
+				6BEEBBC816DFB18F0042CC2C /* ReviewSessionsViewController.xib */,
+				6B0506FD16CCEEF900719CCB /* BoardViewController.h */,
+				6B0506FE16CCEEF900719CCB /* BoardViewController.m */,
+				6B0506FF16CCEEF900719CCB /* BoardViewController.xib */,
+				6B3A6B5716CBEFDE00020F04 /* SettingsViewController.h */,
+				6B3A6B5816CBEFDE00020F04 /* SettingsViewController.m */,
+				6B3A6B5916CBEFDE00020F04 /* SettingsViewController.xib */,
+				6B41B16116CBEA6A009A005D /* HomePageViewController.h */,
+				6B41B16216CBEA6A009A005D /* HomePageViewController.m */,
+				6B41B16316CBEA6A009A005D /* HomePageViewController.xib */,
+				6B41B14D16CBE8EE009A005D /* AppDelegate.h */,
+				6B41B14E16CBE8EE009A005D /* AppDelegate.m */,
+				6B41B14516CBE8EE009A005D /* Supporting Files */,
+			);
+			path = "Poker Live";
+			sourceTree = "<group>";
+		};
+		6B41B14516CBE8EE009A005D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B41B14616CBE8EE009A005D /* Live Poker Stats-Info.plist */,
+				6B41B14716CBE8EE009A005D /* InfoPlist.strings */,
+				6B41B14A16CBE8EE009A005D /* main.m */,
+				6B41B14C16CBE8EE009A005D /* LivePokerStats-Prefix.pch */,
+				6B41B15016CBE8EE009A005D /* Default.png */,
+				6B41B15216CBE8EE009A005D /* Default@2x.png */,
+				6B41B15416CBE8EE009A005D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B41B16016CBE9B1009A005D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6BEEBBC016DFAB2A0042CC2C /* SessionStats.h */,
+				6BEEBBC116DFAB2A0042CC2C /* SessionStats.m */,
+				6BEEBBBD16DFAB1A0042CC2C /* Session.h */,
+				6BEEBBBE16DFAB1A0042CC2C /* Session.m */,
+				6BEEBBC316DFAB3A0042CC2C /* Hand.h */,
+				6BEEBBC416DFAB3A0042CC2C /* Hand.m */,
+				6B0506FA16CCEB8600719CCB /* Settings.h */,
+				6B0506FB16CCEB8600719CCB /* Settings.m */,
+				6B05070616CD3EFE00719CCB /* Player.h */,
+				6B05070716CD3EFE00719CCB /* Player.m */,
+				6BFE01EE16DE66EE00196E2C /* Location.h */,
+				6BFE01EF16DE66EE00196E2C /* Location.m */,
+				6B0506F616CCEA7200719CCB /* DataManager.h */,
+				6B0506F716CCEA7200719CCB /* DataManager.m */,
+				6B41B15616CBE8EE009A005D /* Poker_Live.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		6B41B16616CBEA99009A005D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6BC0D7BE170EC8A00074CE4E /* AddNotesPicker */,
+				6B207CCA17035405002D8986 /* CardsPicker */,
+				6BF2DCA216E6334F00D615CB /* UIScrollViewExtended */,
+				6BFE01E816DE669300196E2C /* AddLocation */,
+				6BD45D3316CE8702008607C2 /* DoublePicker */,
+				6B41B16716CBEABB009A005D /* DejalActivityView */,
+				6B41B16A16CBEABB009A005D /* PickerViewController */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		6B41B16716CBEABB009A005D /* DejalActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				6B41B16816CBEABB009A005D /* DejalActivityView.h */,
+				6B41B16916CBEABB009A005D /* DejalActivityView.m */,
+			);
+			name = DejalActivityView;
+			path = "Poker Live/!Utilities/DejalActivityView";
+			sourceTree = "<group>";
+		};
+		6B41B16A16CBEABB009A005D /* PickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6B41B16B16CBEABB009A005D /* PickerVC.h */,
+				6B41B16C16CBEABB009A005D /* PickerVC.m */,
+				6B41B16D16CBEABB009A005D /* PickerVC.xib */,
+			);
+			name = PickerViewController;
+			path = "Poker Live/!Utilities/PickerViewController";
+			sourceTree = "<group>";
+		};
+		6BB4EDDD171D83BD002C703E /* Commercial */ = {
+			isa = PBXGroup;
+			children = (
+				6BB8D8E9171EE34E003E4A70 /* commercial1 */,
+				6BB8D8EA171EE34E003E4A70 /* commercial2 */,
+				6BB8D8EB171EE34E003E4A70 /* commercial3 */,
+				6BB4EE00171D9776002C703E /* commercialDoneBtnOff.png */,
+				6BB4EE01171D9776002C703E /* commercialDoneBtnOn.png */,
+			);
+			name = Commercial;
+			path = "Poker Live/!Images/Commercial";
+			sourceTree = "<group>";
+		};
+		6BC0D7BE170EC8A00074CE4E /* AddNotesPicker */ = {
+			isa = PBXGroup;
+			children = (
+				6BC0D7C6170EC9590074CE4E /* NotesViewController.h */,
+				6BC0D7C7170EC9590074CE4E /* NotesViewController.m */,
+				6BC0D7C8170EC9590074CE4E /* NotesViewController.xib */,
+			);
+			name = AddNotesPicker;
+			path = "Poker Live/!Utilities/AddNotesPicker";
+			sourceTree = "<group>";
+		};
+		6BC532CC1721891100242A9A /* In-App */ = {
+			isa = PBXGroup;
+			children = (
+				6BC532CD1721896500242A9A /* IAPHelper.h */,
+				6BC532CE1721896500242A9A /* IAPHelper.m */,
+				6BC532D81721965400242A9A /* RageIAPHelper.h */,
+				6BC532D91721965400242A9A /* RageIAPHelper.m */,
+			);
+			name = "In-App";
+			sourceTree = "<group>";
+		};
+		6BC532D517218E0A00242A9A /* StoreVC */ = {
+			isa = PBXGroup;
+			children = (
+				6B1D75251725840600A48D22 /* storeTitleBkg.png */,
+				6B1D75211725807A00A48D22 /* labelBkg.png */,
+				6B1D75221725807A00A48D22 /* storeModalBkg.png */,
+				6B1D751E1725783900A48D22 /* separator.png */,
+				6B1D751C1725779100A48D22 /* viewBtnOn.png */,
+				6B1D75191725771500A48D22 /* viewBtnOff.png */,
+				6BC532D617218E1C00242A9A /* storeVCBackground.png */,
+			);
+			name = StoreVC;
+			sourceTree = "<group>";
+		};
+		6BC9350A16DBCA4200D48EBF /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6BC9351A16DCF2B600D48EBF /* mainMenuSettings.png */,
+				6BC9350D16DBD2A300D48EBF /* mainMenuConfigBtn.png */,
+				6BC9350E16DBD2A300D48EBF /* mainMenuHelpBtn.png */,
+				6BC9350F16DBD2A300D48EBF /* mainMenuNotesBtn.png */,
+				6BC9351016DBD2A300D48EBF /* mainMenuPreviewPreviousBtn.png */,
+				6BC9351116DBD2A300D48EBF /* mainMenuStartBtn.png */,
+				6BC9350B16DBCA4D00D48EBF /* mainMenuBackground.png */,
+			);
+			name = MainMenu;
+			sourceTree = "<group>";
+		};
+		6BC9352016DCF6E100D48EBF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6B5CAEC216DD0A92007D0D02 /* settingsDoneBtnBkg.png */,
+				6BC9352116DCF6F600D48EBF /* settingsBkg.png */,
+				6BC9352216DCF6F600D48EBF /* settingsHeadTitle.png */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		6BD4138716E101C80057A5C0 /* StatsForSession */ = {
+			isa = PBXGroup;
+			children = (
+				6BD4138A16E102BD0057A5C0 /* statsBtnBkg.png */,
+				6BD4138816E101DB0057A5C0 /* statsForSessionBkg.png */,
+			);
+			name = StatsForSession;
+			sourceTree = "<group>";
+		};
+		6BD4139316E10F340057A5C0 /* HandsVC */ = {
+			isa = PBXGroup;
+			children = (
+				6BD4139416E10F440057A5C0 /* sessionVCbkg.png */,
+			);
+			name = HandsVC;
+			sourceTree = "<group>";
+		};
+		6BD45D3316CE8702008607C2 /* DoublePicker */ = {
+			isa = PBXGroup;
+			children = (
+				6BD45D3416CE872E008607C2 /* DoubleComponentInPickerViewViewController.h */,
+				6BD45D3516CE872E008607C2 /* DoubleComponentInPickerViewViewController.m */,
+				6BD45D3716CE8927008607C2 /* DoubleComponentInPickerViewViewController.xib */,
+			);
+			name = DoublePicker;
+			sourceTree = "<group>";
+		};
+		6BE1BBB716F37B23005B00A4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				6BE1BBB816F37B23005B00A4 /* SplashScreen-568h@2x.png */,
+				6BE1BBB916F37B23005B00A4 /* SplashScreen.png */,
+				6BE1BBBA16F37B23005B00A4 /* SplashScreen@2x.png */,
+			);
+			name = Splash;
+			path = "Poker Live/!Images/Splash";
+			sourceTree = "<group>";
+		};
+		6BE619B7171C3B8800493C53 /* PlayersNotesVC */ = {
+			isa = PBXGroup;
+			children = (
+				6BE619B8171C3B8800493C53 /* playersNotesBkg.png */,
+			);
+			name = PlayersNotesVC;
+			path = "Poker Live/!Images/PlayersNotesVC";
+			sourceTree = "<group>";
+		};
+		6BEEBBCB16DFB41D0042CC2C /* Review Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				6BE619BD171C4E8000493C53 /* deleteBtnBkg.png */,
+				6BEEBBCC16DFB42C0042CC2C /* reviewSessionsBkg.jpg */,
+			);
+			name = "Review Sessions";
+			sourceTree = "<group>";
+		};
+		6BF2DC9E16E62B8A00D615CB /* BoardVC */ = {
+			isa = PBXGroup;
+			children = (
+				6BD9145D174122A3004FBCBE /* bottomMenuBtnBkg2.png */,
+				6BD9145E174122A3004FBCBE /* bottomMenuBtnHighlightedBkg2.png */,
+				6BCDFEC317293136004934BB /* statOpenSeatBkg.png */,
+				6BCDFEC417293136004934BB /* statPlayerBkg.png */,
+				6BCDFEC517293136004934BB /* statPlayerSelectedBkg.png */,
+				6BD9146117412EFE004FBCBE /* boardBkg4.png */,
+				6B166CE117283E0F00F5FD50 /* boardBkg3.png */,
+				6BD6B4E016E8CBA800064D8D /* boardBkg2.jpg */,
+				6BE949B4172AAA97008C1CC8 /* bottomMenuSmallBtnHighlightedBkg.png */,
+				6B166CDF172835D000F5FD50 /* bottomMenuSmallBtnBkg.png */,
+				6B166CDD1728333200F5FD50 /* bottomMenuTextBkg.png */,
+				6B166CDB1728322800F5FD50 /* bottomMenuBkg.png */,
+				6B166CD9172830C200F5FD50 /* bottomMenuBtnBkg.png */,
+				6BE949B2172AA80B008C1CC8 /* bottomMenuBtnHighlightedBkg.png */,
+				6B166CD717282ECD00F5FD50 /* boardBkg.png */,
+				6B166CD5172828AE00F5FD50 /* topMenuBoardBetBkg.png */,
+				6B166CD3172827E900F5FD50 /* topMenuBoardBtnBkg.png */,
+				6BE949B7172AAB66008C1CC8 /* topMenuBoardBtnHighlightedBkg.png */,
+				6BE949B9172AABCD008C1CC8 /* topMenuBoardBtnDisabledBkg.png */,
+				6B166CD11728277E00F5FD50 /* topMenuBoardBkg.png */,
+				6BED5CC616F0D11E006E612F /* chipBtn.png */,
+				6BF2DCB316E646BD00D615CB /* boardSampleBkg.jpg */,
+				6BF2DCB116E645F200D615CB /* boardCardShirt.png */,
+				6BBD61E216EE29C30031222C /* heroBtnBkgSelected.png */,
+				6BF2DCAF16E6433F00D615CB /* heroBtnBkg.png */,
+				6BF2DCAD16E6413A00D615CB /* playerBtnSelectedBkg.png */,
+				6BF2DCAB16E63A3A00D615CB /* playerBtnBkg.png */,
+			);
+			name = BoardVC;
+			sourceTree = "<group>";
+		};
+		6BF2DCA216E6334F00D615CB /* UIScrollViewExtended */ = {
+			isa = PBXGroup;
+			children = (
+				6BF2DCA316E6337300D615CB /* UIScrollViewExtended.h */,
+				6BF2DCA416E6337300D615CB /* UIScrollViewExtended.m */,
+			);
+			name = UIScrollViewExtended;
+			sourceTree = "<group>";
+		};
+		6BFE01E816DE669300196E2C /* AddLocation */ = {
+			isa = PBXGroup;
+			children = (
+				6BFE01E916DE669300196E2C /* AddLocationViewController.h */,
+				6BFE01EA16DE669300196E2C /* AddLocationViewController.m */,
+				6BFE01EB16DE669300196E2C /* AddLocationViewController.xib */,
+			);
+			name = AddLocation;
+			path = "Poker Live/!Utilities/AddLocation";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B41B13816CBE8EE009A005D /* Live Poker Stats */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B41B15B16CBE8EE009A005D /* Build configuration list for PBXNativeTarget "Live Poker Stats" */;
+			buildPhases = (
+				6B41B13516CBE8EE009A005D /* Sources */,
+				6B41B13616CBE8EE009A005D /* Frameworks */,
+				6B41B13716CBE8EE009A005D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Live Poker Stats";
+			productName = "Poker Live";
+			productReference = 6B41B13916CBE8EE009A005D /* LiveHUD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B41B13116CBE8EE009A005D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Onix Systems";
+			};
+			buildConfigurationList = 6B41B13416CBE8EE009A005D /* Build configuration list for PBXProject "live poker stats" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6B41B13016CBE8EE009A005D;
+			productRefGroup = 6B41B13A16CBE8EE009A005D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B41B13816CBE8EE009A005D /* Live Poker Stats */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B41B13716CBE8EE009A005D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B41B14916CBE8EE009A005D /* InfoPlist.strings in Resources */,
+				6B41B16516CBEA6A009A005D /* HomePageViewController.xib in Resources */,
+				6B41B17316CBEABB009A005D /* PickerVC.xib in Resources */,
+				6B3A6B5B16CBEFDE00020F04 /* SettingsViewController.xib in Resources */,
+				6B3A6B6416CBF7A500020F04 /* menuButtonBg.png in Resources */,
+				6B3A6B6516CBF7A500020F04 /* menuButtonBg@2x.png in Resources */,
+				6B3A6B6616CBF7A500020F04 /* ModalBg-Bottom.png in Resources */,
+				6B3A6B6716CBF7A500020F04 /* pickerViewBg-Top.png in Resources */,
+				6B3A6B6816CBF7A500020F04 /* pickerViewBg.png in Resources */,
+				6B3A6B6B16CBF81400020F04 /* topMenuBkg.png in Resources */,
+				6B3A6B6C16CBF81400020F04 /* topMenuBtnBkg.png in Resources */,
+				6B05070116CCEEF900719CCB /* BoardViewController.xib in Resources */,
+				6B05070416CD2D3000719CCB /* CardShirt.jpg in Resources */,
+				6BD45D2F16CE71FE008607C2 /* icon57.1.png in Resources */,
+				6BD45D3116CE7202008607C2 /* icon114.1.png in Resources */,
+				6BD45D3816CE8927008607C2 /* DoubleComponentInPickerViewViewController.xib in Resources */,
+				6BD45D3C16CE97AC008607C2 /* cardsFolded.jpg in Resources */,
+				6BE1FCD216D26DBB00DA7CE3 /* CardFace.jpg in Resources */,
+				6BC9350C16DBCA4D00D48EBF /* mainMenuBackground.png in Resources */,
+				6BC9351216DBD2A300D48EBF /* mainMenuConfigBtn.png in Resources */,
+				6BC9351316DBD2A300D48EBF /* mainMenuHelpBtn.png in Resources */,
+				6BC9351416DBD2A300D48EBF /* mainMenuNotesBtn.png in Resources */,
+				6BC9351516DBD2A300D48EBF /* mainMenuPreviewPreviousBtn.png in Resources */,
+				6BC9351616DBD2A300D48EBF /* mainMenuStartBtn.png in Resources */,
+				6BC9351B16DCF2B600D48EBF /* mainMenuSettings.png in Resources */,
+				6BC9351E16DCF53600D48EBF /* leftArrowBkg.png in Resources */,
+				6BC9351F16DCF53600D48EBF /* rightArrowBkg.png in Resources */,
+				6BC9352316DCF6F600D48EBF /* settingsBkg.png in Resources */,
+				6BC9352416DCF6F600D48EBF /* settingsHeadTitle.png in Resources */,
+				6BC9352716DCF74000D48EBF /* backBtnBkg.png in Resources */,
+				6BC9352816DCF74000D48EBF /* greenBallBkg.png in Resources */,
+				6B5CAEC316DD0A92007D0D02 /* settingsDoneBtnBkg.png in Resources */,
+				6BFE01ED16DE669300196E2C /* AddLocationViewController.xib in Resources */,
+				6BFE01F416DE6F5500196E2C /* Shadow1.png in Resources */,
+				6BFE01F516DE6F5500196E2C /* Shadow2.png in Resources */,
+				6BFE01F616DE6F5500196E2C /* Shadow3.png in Resources */,
+				6BEEBBCA16DFB18F0042CC2C /* ReviewSessionsViewController.xib in Resources */,
+				6BEEBBCD16DFB42C0042CC2C /* reviewSessionsBkg.jpg in Resources */,
+				6BEEBBCF16DFB8280042CC2C /* settingsBtnBkg.png in Resources */,
+				6BD4138616E101380057A5C0 /* StatsForSessionViewController.xib in Resources */,
+				6BD4138916E101DB0057A5C0 /* statsForSessionBkg.png in Resources */,
+				6BD4138B16E102BD0057A5C0 /* statsBtnBkg.png in Resources */,
+				6BD4139216E10F2C0057A5C0 /* HandsViewController.xib in Resources */,
+				6BD4139516E10F440057A5C0 /* sessionVCbkg.png in Resources */,
+				6BF2DC9D16E62AEF00D615CB /* BoardLandscapeViewController.xib in Resources */,
+				6BF2DCAC16E63A3A00D615CB /* playerBtnBkg.png in Resources */,
+				6BF2DCAE16E6413A00D615CB /* playerBtnSelectedBkg.png in Resources */,
+				6BF2DCB016E6433F00D615CB /* heroBtnBkg.png in Resources */,
+				6BF2DCB216E645F200D615CB /* boardCardShirt.png in Resources */,
+				6BF2DCB416E646BD00D615CB /* boardSampleBkg.jpg in Resources */,
+				6BD6B4E116E8CBA800064D8D /* boardBkg2.jpg in Resources */,
+				6BBD61E316EE29C30031222C /* heroBtnBkgSelected.png in Resources */,
+				6BED5CC716F0D11E006E612F /* chipBtn.png in Resources */,
+				6BE1BBBB16F37B23005B00A4 /* SplashScreen-568h@2x.png in Resources */,
+				6BE1BBBC16F37B23005B00A4 /* SplashScreen.png in Resources */,
+				6BE1BBBD16F37B23005B00A4 /* SplashScreen@2x.png in Resources */,
+				6BE1BBCB16F39A06005B00A4 /* Default.png in Resources */,
+				6BE1BBCD16F39A0C005B00A4 /* Default@2x.png in Resources */,
+				6BE1BBCF16F39A11005B00A4 /* Default-568h@2x.png in Resources */,
+				6B207CCF17035405002D8986 /* CardsPickerVC.xib in Resources */,
+				6B207CD217035802002D8986 /* cardPickerBtnBkg.jpg in Resources */,
+				6B207CD417035904002D8986 /* cardPickerBackspaceBkg.png in Resources */,
+				6B207CD617035A5C002D8986 /* cardPickerTitleBkg.png in Resources */,
+				6B207CD817035B45002D8986 /* cardPickerCardsLabelBkg.png in Resources */,
+				6B207CDA17035F24002D8986 /* cardPickerGreyBtnBkg.png in Resources */,
+				6B207CDC17036344002D8986 /* cardPickerWhiteBtnBkg.png in Resources */,
+				6BC0D7CA170EC9590074CE4E /* NotesViewController.xib in Resources */,
+				6BC0D7CC170EE9CB0074CE4E /* ShadowUpToDown1.png in Resources */,
+				6BE619AD171C007700493C53 /* PlayersNotesViewController.xib in Resources */,
+				6BE619B9171C3B8800493C53 /* playersNotesBkg.png in Resources */,
+				6BE619BE171C4E8000493C53 /* deleteBtnBkg.png in Resources */,
+				6BB4EC4D171D7A6B002C703E /* AirshipConfig.plist in Resources */,
+				6BB4EE08171D9777002C703E /* commercialDoneBtnOff.png in Resources */,
+				6BB4EE09171D9777002C703E /* commercialDoneBtnOn.png in Resources */,
+				6BB8D8EC171EE34E003E4A70 /* commercial1 in Resources */,
+				6BB8D8ED171EE34E003E4A70 /* commercial2 in Resources */,
+				6BB8D8EE171EE34E003E4A70 /* commercial3 in Resources */,
+				6BB8D8F2171EF0F2003E4A70 /* commercial.plist in Resources */,
+				6BC532D417218D4000242A9A /* StoreViewController.xib in Resources */,
+				6BC532D717218E1C00242A9A /* storeVCBackground.png in Resources */,
+				6B1D75181725722F00A48D22 /* Products.plist in Resources */,
+				6B1D751A1725771500A48D22 /* viewBtnOff.png in Resources */,
+				6B1D751D1725779100A48D22 /* viewBtnOn.png in Resources */,
+				6B1D751F1725783900A48D22 /* separator.png in Resources */,
+				6B1D75231725807A00A48D22 /* labelBkg.png in Resources */,
+				6B1D75241725807A00A48D22 /* storeModalBkg.png in Resources */,
+				6B1D75261725840600A48D22 /* storeTitleBkg.png in Resources */,
+				6B1D752817258A0800A48D22 /* appStoreBuyNow.png in Resources */,
+				6B166CD21728277E00F5FD50 /* topMenuBoardBkg.png in Resources */,
+				6B166CD4172827E900F5FD50 /* topMenuBoardBtnBkg.png in Resources */,
+				6B166CD6172828AE00F5FD50 /* topMenuBoardBetBkg.png in Resources */,
+				6B166CD817282ECD00F5FD50 /* boardBkg.png in Resources */,
+				6B166CDA172830C200F5FD50 /* bottomMenuBtnBkg.png in Resources */,
+				6B166CDC1728322800F5FD50 /* bottomMenuBkg.png in Resources */,
+				6B166CDE1728333200F5FD50 /* bottomMenuTextBkg.png in Resources */,
+				6B166CE0172835D000F5FD50 /* bottomMenuSmallBtnBkg.png in Resources */,
+				6B166CE217283E0F00F5FD50 /* boardBkg3.png in Resources */,
+				6BCDFEC617293136004934BB /* statOpenSeatBkg.png in Resources */,
+				6BCDFEC717293136004934BB /* statPlayerBkg.png in Resources */,
+				6BCDFEC817293136004934BB /* statPlayerSelectedBkg.png in Resources */,
+				6BE949B3172AA80B008C1CC8 /* bottomMenuBtnHighlightedBkg.png in Resources */,
+				6BE949B5172AAA97008C1CC8 /* bottomMenuSmallBtnHighlightedBkg.png in Resources */,
+				6BE949B8172AAB66008C1CC8 /* topMenuBoardBtnHighlightedBkg.png in Resources */,
+				6BE949BA172AABCD008C1CC8 /* topMenuBoardBtnDisabledBkg.png in Resources */,
+				6BD9145F174122A3004FBCBE /* bottomMenuBtnBkg2.png in Resources */,
+				6BD91460174122A3004FBCBE /* bottomMenuBtnHighlightedBkg2.png in Resources */,
+				6BD9146217412EFE004FBCBE /* boardBkg4.png in Resources */,
+				6BD91464174148A6004FBCBE /* CardFace.png in Resources */,
+				6BD2BA0B1746761A00546FF7 /* iTunesArtwork in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B41B13516CBE8EE009A005D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B41B14B16CBE8EE009A005D /* main.m in Sources */,
+				6B41B14F16CBE8EE009A005D /* AppDelegate.m in Sources */,
+				6B41B15816CBE8EE009A005D /* Poker_Live.xcdatamodeld in Sources */,
+				6B41B16416CBEA6A009A005D /* HomePageViewController.m in Sources */,
+				6B41B17116CBEABB009A005D /* DejalActivityView.m in Sources */,
+				6B41B17216CBEABB009A005D /* PickerVC.m in Sources */,
+				6B3A6B5A16CBEFDE00020F04 /* SettingsViewController.m in Sources */,
+				6B0506F816CCEA7200719CCB /* DataManager.m in Sources */,
+				6B0506FC16CCEB8600719CCB /* Settings.m in Sources */,
+				6B05070016CCEEF900719CCB /* BoardViewController.m in Sources */,
+				6B05070816CD3EFE00719CCB /* Player.m in Sources */,
+				6BD45D3616CE872E008607C2 /* DoubleComponentInPickerViewViewController.m in Sources */,
+				6BFE01EC16DE669300196E2C /* AddLocationViewController.m in Sources */,
+				6BFE01F016DE66EE00196E2C /* Location.m in Sources */,
+				6BEEBBBF16DFAB1A0042CC2C /* Session.m in Sources */,
+				6BEEBBC216DFAB2A0042CC2C /* SessionStats.m in Sources */,
+				6BEEBBC516DFAB3A0042CC2C /* Hand.m in Sources */,
+				6BEEBBC916DFB18F0042CC2C /* ReviewSessionsViewController.m in Sources */,
+				6BD4138516E101380057A5C0 /* StatsForSessionViewController.m in Sources */,
+				6BD4139116E10F2C0057A5C0 /* HandsViewController.m in Sources */,
+				6BF2DC9C16E62AEF00D615CB /* BoardLandscapeViewController.m in Sources */,
+				6BF2DCA516E6337300D615CB /* UIScrollViewExtended.m in Sources */,
+				6B207CCE17035405002D8986 /* CardsPickerVC.m in Sources */,
+				6BC0D7C9170EC9590074CE4E /* NotesViewController.m in Sources */,
+				6BE619AC171C007700493C53 /* PlayersNotesViewController.m in Sources */,
+				6BC532CF1721896500242A9A /* IAPHelper.m in Sources */,
+				6BC532D317218D4000242A9A /* StoreViewController.m in Sources */,
+				6BC532DA1721965400242A9A /* RageIAPHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6B41B14716CBE8EE009A005D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B41B14816CBE8EE009A005D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B41B15916CBE8EE009A005D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6B41B15A16CBE8EE009A005D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B41B15C16CBE8EE009A005D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Poker Live/LivePokerStats-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"Poker Live/!Utilities/Airship/\"/**";
+				INFOPLIST_FILE = "Poker Live/Live Poker Stats-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Poker Live/!Utilities/Airship\"",
+				);
+				PRODUCT_NAME = LiveHUD;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6B41B15D16CBE8EE009A005D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Poker Live/LivePokerStats-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"Poker Live/!Utilities/Airship/\"/**";
+				INFOPLIST_FILE = "Poker Live/Live Poker Stats-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Poker Live/!Utilities/Airship\"",
+				);
+				PRODUCT_NAME = LiveHUD;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B41B13416CBE8EE009A005D /* Build configuration list for PBXProject "live poker stats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B41B15916CBE8EE009A005D /* Debug */,
+				6B41B15A16CBE8EE009A005D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B41B15B16CBE8EE009A005D /* Build configuration list for PBXNativeTarget "Live Poker Stats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B41B15C16CBE8EE009A005D /* Debug */,
+				6B41B15D16CBE8EE009A005D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6B41B15616CBE8EE009A005D /* Poker_Live.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6B41B15716CBE8EE009A005D /* Poker_Live.xcdatamodel */,
+			);
+			currentVersion = 6B41B15716CBE8EE009A005D /* Poker_Live.xcdatamodel */;
+			name = Poker_Live.xcdatamodeld;
+			path = "Poker Live/Poker_Live.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6B41B13116CBE8EE009A005D /* Project object */;
+}

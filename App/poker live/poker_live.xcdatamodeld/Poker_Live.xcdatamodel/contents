@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="11G63b" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Hand" representedClassName="Hand" syncable="YES">
+        <attribute name="handBBwon" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="handName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="handNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="session" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="hands" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Player" representedClassName="Player" syncable="YES">
+        <attribute name="lastActionTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="player3Bets" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="player3BetsOpp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerAGG" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerAllActions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerBets" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerBetSize" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerCalls" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerCard1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerCard2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerCBets" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerCBetsOpp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerChecks" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerDonks" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerDonksOpp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerFoldedCards" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="playerFolds" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerHands" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerNotes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerPFR" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerRaises" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerStackSize" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerStatsString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerStatus" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerTotalBetSize" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="playerVPIP" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playerWalks" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Session" representedClassName="Session" syncable="YES">
+        <attribute name="sessionBBwon" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="sessionDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sessionLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionNumOfHands" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="hands" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Hand" inverseName="session" inverseEntity="Hand" syncable="YES"/>
+        <relationship name="sessionStats" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SessionStats" inverseName="session" inverseEntity="SessionStats" syncable="YES"/>
+    </entity>
+    <entity name="SessionStats" representedClassName="SessionStats" syncable="YES">
+        <attribute name="statsBB100Hands" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="statsBiggestPotLost" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="statsBiggestPotWon" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="statsHandsPlayed" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="statsHandsWon" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="session" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="sessionStats" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <entity name="Settings" representedClassName="Settings" syncable="YES">
+        <attribute name="settingsCard1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsCard2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsCard3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsCard4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsCard5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsHeroName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsIsChanged" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="settingsLocationName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsMaxLimit" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="settingsMinLimit" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="settingsNumberOfPlayers" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="settingsPlayer0" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsPlayer1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsPlayer2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsPlayer3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsPlayer4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsPlayer5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsPlayer6" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsPlayer7" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsPlayer8" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsPlayer9" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Hand" positionX="189" positionY="189" width="128" height="105"/>
+        <element name="Location" positionX="160" positionY="54" width="128" height="60"/>
+        <element name="Player" positionX="-603" positionY="99" width="128" height="465"/>
+        <element name="Session" positionX="-38" positionY="27" width="128" height="135"/>
+        <element name="SessionStats" positionX="-216" positionY="90" width="128" height="135"/>
+        <element name="Settings" positionX="-425" positionY="90" width="128" height="360"/>
+    </elements>
+</model>

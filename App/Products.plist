@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>product1</key>
+	<dict>
+		<key>handsLimitValue</key>
+		<string>500</string>
+		<key>appleId</key>
+		<string>com.lem.pokerlivehud.silver</string>
+		<key>title</key>
+		<string>Silver Edition</string>
+		<key>btnTitle</key>
+		<string>BUY NOW</string>
+		<key>btnTitlePurchased</key>
+		<string>Purchased</string>
+		<key>text</key>
+		<string>Silver Edition in-app product description.</string>
+	</dict>
+	<key>product2</key>
+	<dict>
+		<key>handsLimitValue</key>
+		<string>1000</string>
+		<key>appleId</key>
+		<string>com.lem.pokerlivehud.gold</string>
+		<key>title</key>
+		<string>Gold Edition</string>
+		<key>btnTitle</key>
+		<string>BUY NOW</string>
+		<key>btnTitlePurchased</key>
+		<string>Purchased</string>
+		<key>text</key>
+		<string>Gold Edition in-app product description.</string>
+	</dict>
+	<key>product3</key>
+	<dict>
+		<key>handsLimitValue</key>
+		<string>0</string>
+		<key>appleId</key>
+		<string>com.lem.pokerlivehud.platinum</string>
+		<key>title</key>
+		<string>Platinum Edition</string>
+		<key>btnTitle</key>
+		<string>SUBSCRIBE</string>
+		<key>btnTitlePurchased</key>
+		<string>Subscribed</string>
+		<key>text</key>
+		<string>Platinum Edition in-app product description.</string>
+	</dict>
+</dict>
+</plist>

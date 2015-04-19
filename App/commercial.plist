@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>commercial1</key>
+        <dict>
+            <key>last_update</key>
+            <string>2013-05-17 16:18:20</string>
+            <key>imageURL</key>
+            <string>http://pokerlivehud.com/API/commercial1.png</string>
+            <key>text</key>
+            <string>Get PokerLiveHUD
+and be the ultimate cash
+game player that is in you!</string>
+            <key>okBtn</key>
+            <dict>
+                <key>buttonTitle</key>
+                <string>Close</string>
+            </dict>
+        </dict>
+        <key>commercial2</key>
+        <dict>
+            <key>last_update</key>
+            <string>2013-05-17 16:17:20</string>
+            <key>imageURL</key>
+            <string>http://pokerlivehud.com/API/commercial2.png</string>
+            <key>text</key>
+            <string>Bored at the poker table?
+Let PokerTiltsMe entertain
+you and tilt your opponents!
+Download here for free!</string>
+            <key>okBtn</key>
+            <dict>
+                <key>buttonTitle</key>
+                <string>Close</string>
+            </dict>
+            <key>actionBtn</key>
+            <dict>
+                <key>buttonTitle</key>
+                <string>Download</string>
+                <key>buttonURL</key>
+                <string>http://ios.onix.ua/clients/lem/poker/</string>
+            </dict>
+        </dict>
+        <key>commercial3</key>
+        <dict>
+            <key>last_update</key>
+            <string>2013-05-17 16:17:20</string>
+            <key>imageURL</key>
+            <string>http://pokerlivehud.com/API/commercial3.png</string>
+            <key>text</key>
+            <string>Bored and Lonely in a
+strange city? Forget Mrs
+Hen and her five daughters.
+Download the ultimate
+poker concierge and
+explore the city now!</string>
+            <key>okBtn</key>
+            <dict>
+                <key>buttonTitle</key>
+                <string>Close</string>
+            </dict>
+            <key>actionBtn</key>
+            <dict>
+                <key>buttonTitle</key>
+                <string>Download</string>
+                <key>buttonURL</key>
+                <string>http://ios.onix.ua/clients/lem/poker/</string>
+            </dict>
+        </dict>
+    </dict>
+</plist>
